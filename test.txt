@@ -1,0 +1,2069 @@
+firefox
+termite
+git clone https://github.com/josephsdavid/emergency.git
+nix-channel --add https://github.com/rycee/home-manager/archive/master.tar.gz home-manager
+nix-shell '<home-manager>' -A install
+cd experiments/
+cp learnR/ ~/learnR
+cp -R learnR/ ~/learnR
+cd /..
+cd home
+cd .config
+cd Encryptr/
+cd ~/.config/Encryptr/
+git commit -m "safety"
+cd ~/emergency/
+sudo rm -rf dj
+du
+du -h
+du --help
+du -c
+playerctl next
+man playerctl
+vim ~/.config/lemonbar/music
+cd ~/.config
+mkdir lemonbar
+chmod +x ~/.config/lemonbar/music
+. ~/.config/lemonbar/music
+exec ~/.config/lemonbar/music
+gotop -p
+docker
+cd /etc
+cd /etc/default/
+vim neo4j
+cd /nix/store/2k95d9pia21339jnix4wsarp3bmvlv55-neo4j-3.5.3/share/neo4j/conf
+vim neo4j.conf
+neo4j ulimit -n start
+neo4j status
+neo4j console
+man limits.conf(5)
+su neo4j
+vim ~/tmp
+mkdir tmp
+vim shrek
+vim ~/.config
+vim json2mongo
+cd northwind/
+vim instnwnd.sql
+nix-shell -p nixos.mysqlworkbench
+nix-shell -p mysqlworkbench
+nix-shell -p sqlworkbench
+nix-shell -p mysql-workbench
+systemctl start mysql
+nixos-collect-garbage -d
+git clone https://github.com/josephsdavid/MSDS
+sudo mysql -u root
+mkdir dbfinal
+mysql -u david
+mysql -u mysql
+mysql
+vim nwinno.sql
+vim nwind.sql
+vim northwindmysql.sql
+rm northwindmysql.sql
+rm nwinno.sql
+cat nwind.sql
+vim nwinddata.sql
+vim north.sql
+mkdir advancedR
+cp ~/emergency/experiments/.envrc .envrc
+git push -u origin master
+git remote add origin https://github.com/josephsdavid/advancedR.git
+git commit -m "first commit"
+cd northwindmysql/
+git commit -m "added shell.nix for all R libraries used in the project"
+nix-shell -p mopidy
+mopidy
+mopidy-spotify
+nohup mopidy &
+vim ~/.ncmpcpp/config
+cat nohup.out
+pkill mopidy
+mkdir ~/.ncmpcpp
+mkfifo ~/tmp/mpd.fifo
+cd ~/.ncmpcpp/
+cat ~/tmp/mpd.fifo
+ncmpcpp
+vim ~/.config/mopidy/mopidy.conf
+rm -r ~/.ncmpcpp/
+rm -r ~/.config/mopidy/
+cd ~/learnR/
+mkdir functional
+vim functional.R
+man nixos-rebuild
+redshift
+7z e Alekhine\ Def\ CG101.7z
+7z -e A2E.7z
+7z e A2E.7z
+rm ~/.scidvspc/config/
+rm -r ~/.scidvspc/config/
+scid
+;ls
+vim .envrc
+cd github.com/johnnadratowski/golang-neo4j-bolt-driver/
+rm -r .git .gitignore
+rm -r go
+rm -rf go
+go get github.com/johnnadratowski/golang-neo4j-bolt-driver
+git submodule add https://github.com/johnnadratowski/golang-neo4j-bolt-driver go/src/github.com/johnnadratowski/golang-neo4j-bolt-driver
+git commit -m "drivers for days"
+git push -f origin master
+go get github.com/neo4j/neo4j-go-driver/neo4j
+cd src
+cd github.com
+ks
+vim test.go
+go run test.go
+vim test2.go
+go run test2.go
+go run neo4j.go
+git submodule add https://github.com/neo4j/neo4j-go-driver/neo4j go/src/github.com/neo4j-drivers/gobolt/
+git commit -m "working on getting go driver running"
+vim make_release.sh
+./ run_tests.sh
+./run_tests.sh
+./make_release.sh
+cd build/
+vim CMakeOutput.log
+./make_debug.sh
+which openssl
+cd build
+cd CMakeFiles/
+cd 3.13.4/
+vim make_debug.sh
+mkdir sql
+cd sql
+git commit -m "added northwind sql file"
+sudo nix-collect-garbage --delete-older-than 3d
+sudo nix-collect-garbage --delete-older-than 2d
+git clone https://github.com/josephsdavid/Useful-R-Functions.git
+git commit -m "routine update"
+vim ml.R
+cd emergency/
+cd functional/
+vim firststeps.R
+vim Pipfile
+cat Pipfile.lock
+pip install neo4j
+pipenv install neo4j
+python test_neo4j.py
+python time_test.py
+vim time_test.py
+vim test_neo4j.py
+python test_neo4j.py neo4j MutantToast2
+python test_neo4j.py http://localhost:7474 neo4j MutantToast2
+python nfjtest.py
+vim nfjtest.py
+pipenv install py2neo
+. import.sh
+neo4j shell
+vim import.sh
+which neo4j-shell
+vim bright
+chmod +x bright
+fish_vi_key_bindings
+bash import.sh
+cd northwind
+sh import.sh
+which java
+nix-shell -p java
+nix-shell -p nixos.java
+nix-shell -p jre umlet
+bash bin/neo4j-shell
+lsof
+lsof -u david
+pkill 577
+vim neo4j-server.properties
+mv northwind.db/ data
+bash bin/neo4j start
+sudo bash neo4j-shell -path ../northwind.db -file ../import_csv.cypher
+sudo bash neo4j-shell
+sudo mv northwind.db neo4j-community-2.1.6/data
+cd conf/
+pkill 127
+cd neo4j-community-2.1.6/
+pkill neo4j
+pkill 7439
+sudo bash bin/neo4j console
+sudo bash bin/neo4j start
+sudo bash bin/neo4j start-no-wait
+sudo bash bin/neo4j-shell -path northwind.db -file import_csv.cypher
+sudo bash bin/neo4j stop
+sudo neo4j start
+cp ~/F1_Racer/.envrc  .envrc
+cp ~/dbfinal/shell.nix shell.nix
+cp ~/dbproject/shell.nix shell.nix
+vim importer.py
+cp .envrc ~/tmp/envrc
+cp shell.nix ~/tmp/shell.nix
+rm neo4j-experiements/
+git clone https://github.com/jhb/neo4j-experiements.git
+cp ~/tmp/envrc .envrc
+cd neo4j-experiements/
+bash doit.sh
+vim doit.sh
+bash ./server/bin/neo4j-shell
+bash /server/bin/neo4j-shell
+whereis neo4j
+cd /nix/store/pqqcvr0xc69qghz83iyflql56hyv55dy-neo4j-3.5.3/share/neo4j/import/
+cd Downloads/northwind/northwind/
+cp *.csv /nix/store/pqqcvr0xc69qghz83iyflql56hyv55dy-neo4j-3.5.3/share/neo4j/import/
+sudo cp *.csv /nix/store/pqqcvr0xc69qghz83iyflql56hyv55dy-neo4j-3.5.3/share/neo4j/import/
+systemctl status
+neofetch | grep OS
+man grep
+neofetch | grep OS Kernel
+neofetch | grep OS ; neofetch | grep kernel
+neofetch | grep OS ; neofetch | grep Kernel
+systemd-analyze ; systemd-analyze --blame | wc -l ; neofetch | grep OS ; neofetch | grep Kernel
+systemd-analyze ; systemd-analyze -blame | wc -l ; neofetch | grep OS ; neofetch | grep Kernel
+pinta
+systemd-analyze ; systemd-analyze blame | wc -l ; neofetch | grep OS ; neofetch | grep Kernel
+vim lol.txt
+bash $EDITOR
+cd ~/.config/fish
+cd functions/
+vim fish_prompt.fish
+nix-shell -p xorg.xdpyinfo
+nix-env fff
+recorder
+nix-shell -p filet
+f
+abbr f 'fff'
+fff Downloads/
+alias f 'fff'
+systemctl stop neo4j
+rm -rf neo4j-experiements/
+which stockfish
+man stockfish
+stockfish -h
+stockfish --help
+sens
+nix-shell -p compgen
+line 303: compgen: command not found
+compgen
+bash compgen
+compgen -c
+docker pull neo4j
+docker run neo4j/
+    neo4j
+    --volume=$HOME/neo4j/data:/data \
+    --publish=7474:7474 --publish=7687:7687 \
+docker run \
+sudo docker run neo4j/
+    neo4j
+    --volume=$HOME/neo4j/data:/data \
+    --publish=7474:7474 --publish=7687:7687 \
+sudo docker run \
+git clone https://github.com/neo4j-examples/neo4j-movies-template.git
+cd /var/lib/neo4j/
+cd import/
+sudo cd import
+neo4j stop
+neo4j start
+sudo docker pull neo4j
+sudo docker run neo4j-shell
+sudo docker run neo4j console
+sudo docker run neo4j shell
+sudo docker exec -it testneo4j bash
+sudo docker exec  bash
+sudo docker exec  neo4j bash
+xclip
+cat profiler | xclip
+echo hello | xclip
+cat profiler | xclip -selection clipboard -o
+vim profiler
+200*10/60 | bc
+200\*10/60 | bc
+echo '200*10/60' | bc
+cat results1 | wc
+vim results1
+sudo docker run neo4j
+mv q1.cypher simple.cypher
+mvmv simple.cypher complex.cypher
+mv results1 complexneo
+mv simple.cypher complex.cypher
+cat simple.cypher
+vim simple.cypher
+car simpleneo | wc
+cat simpleneo | wc
+vim simpleneo
+vim medium.cypher
+vim trial.R
+cat trial.R
+medneo | wc
+vim medneo
+cat medneo | wc
+cat medneo | tr "," ", " | wc
+cat medneo | tr "," ",\s" | wc
+mv trial.R plots.R
+vim output
+pkill rstudio
+vim neo4j.go
+cat *.go | wc -l
+cat *.py | wc -l
+cd ../F1_Racer/
+cd seabolt-1.7.3/
+cat make_release.sh | wc -l
+vim EDA/EDA.r
+cd dbproject
+cd .local
+cd fff/trash/
+rm -r *
+rm -rf northwind/
+sudo rm -rf neo4j
+rm cat.txt
+cd tmp/
+sudo rm -rf northwind/
+envrc
+abbr shn 'cat /home/david/tmp/shell.nix > shell.nix'
+abbr shn 'cat /home/david/tmp/shell.nix > shell.nix && cat /home/david/tmp/envrc > .envrc'
+git commit -m "added ML folder"
+vim EDA/EDA.rmd
+cd .cache
+cd lorri/
+vim EDA.Rmd
+git commit -m "fixed up some typos I made"
+nix-prefetch-git https://github.com/neomutt/neomutt
+nix-shell -p  nix-prefetch-git
+nix-shell -p 8t
+man sudo
+sudo -A
+sudo -A ranger
+sudoedit ~/.config/Pinta/palette.txt
+sudoedit ~/.config/lemonbar/test
+cat F1_Racer/shell.nix
+abbr mksh 'cat /home/david/tmp/shell.nix > shell.nix && cat /home/david/tmp/envrc > .envrc'
+cat *.R | wc -l
+cat "*.R" | wc -l
+cat "*.r" | wc -l
+cat *.r
+cat *.r | wc
+cat *.rmd | wc
+cat *.Rmd | wc
+nix-shell -p steam
+cd .cache/lorri/
+git clone https://github.com/josephsdavid/nixfiles.git
+git commit -m "update with playerctl, post neo4j hell"
+rm -rf R
+rm F1_Racer/
+nix-shell -p vivaldi
+nix-env -iA nixos.vivaldi
+vivaldi
+nix-shell -p chromium
+abbr hms 'home-manager switch'
+abbr hme 'home-manager edit'
+ls ~/.cache/lorri/F1_Racer/
+ls ~/.cache/lorri/F1_Racer/gc_root/
+cat ~/.config/herbstluftwm/a
+git commit -m "update to shell.nix, about to continue working on R coding"
+nix-env -i -E ' f: (import <nixpkgs> {}).callPackage ./scientifica.nix { }'
+vim F1_Racer
+cd ml
+mkdir ML
+cd ML/
+cat ~/.config/herbstluftwm/theme
+herbstclient set frame_bg_active color black
+herbstclient set frame_border_width 0
+herbstclient set always_show_frame 0
+herbstclient set frame_bg_transparent 0
+herbstclient set frame_bg_transparent 1
+nvidia-settings
+systemd-analyze blame
+sudo vim /etc/nixos/scifi.nix
+sudo nixos-rebuild test
+cat F1_Racer/EDA/EDA.Rmd | wc -l
+cat F1_Racer/EDA/EDA.Rmd | wc
+pkill redshift
+vim ~/.config/termite/
+fc-list | grep scientifica
+systemctl list-unit-files | grep enabled
+systemctl list-unit-files | grep x
+systemctl --user list-unit-files | grep x
+systemctl  list-unit-files | grep X
+cat ~/.config/herbstluftwm/autostart
+cd Ajedrez/
+chmod +x BrAjedrez
+./BrAjedrez
+BrAjedrez
+exec BrAjedrez
+nix-env -f Ajedrez.tar.xz
+nix-env -if Ajedrez.tar.xz
+nix-info
+man nix-info
+cat ~/.config/herbstluftwm/keybinds
+:q!
+herbstclient list_keybinds > keybinds
+man w3m
+w3m
+w3m youtube.com
+cpufreq-bench
+vim fried.R
+git commit -m "pushing beginning of ML"
+rm -rf ~/R
+man nix-collect-garbage
+man gc-roots
+nix-store --print-roots
+nix-store print-roots
+mkdir reports
+cd reports
+vim test.Rnw
+cat test.Rnw > report.Rnw
+rm test.*
+vim preamble.tex
+cd reports/
+zathura report.pdf
+latexmk report.tex
+latexmk -c report.tex
+nixos-rebuild edit
+mkdir Logistic
+mv Logreg.sas logistic
+mv logistic Logistic/logreg.sas
+vim logr
+git commit -m "added merediths code and a style for the report"
+notify-send test
+notify-send test test reddit
+notify-send test \n ok
+notify-send test\nok
+notify-send test\n ok
+notify-send test\n ok okok
+notify-send test\n "poop"
+notify-send allen\n "poopoo"
+notify-send allen\n "sucks"
+home-manager news
+cd .screenlayout
+nix-shell -p lolcat
+vim colors
+chmod +x colors
+sh colors
+find /nix/ -iname libQt5\*
+nix-shell -p cmatrix
+nix-shell -p cmatrix lolcat
+man fff
+wget
+wget google.com
+rm index.html
+twic.sh --help
+1260 1299 twic.pgn
+twix.sh 1260 1299 twic.pgn
+twic.sh 1260 1299 twic.pgn
+man pgnscid
+pgnscid -f
+pgnscid -h
+cd chess/
+twic.sh
+cd ~/.local
+cd share
+chmod +x twic.sh
+cd ~/Downloads/
+vim twic.sh
+cd ~/chess
+rm twic.*
+vim ~/scripts/twic.sh
+cd db
+rm -rf db
+cd chess
+twic.sh 1260 1275 twic.pgn
+time vim -c :q
+time command vim -c :q
+herbstclient pad 0 0 18
+herbstclient pad 0 0 0
+rm ~/.cache/lorri/F1_Racer/
+lorri watch
+direnv allow
+vim tm
+nix-env -if https://github.com/haslersn/fish-nix-shell/archive/master.tar.gz
+nix-env --uninstall fish-nix-shell
+rm tm
+git commit -m "pre work update"
+rm -rf ~/.cache/lorri/F1_Racer/
+man vis
+vis -
+vis -h
+nix-shell -p cli-visualizer
+vis
+vim ~/.config/herbstluftwm/theme
+vim ~/F1_Racer/EDA/EDA.R
+vim ~/F1_Racer/EDA/EDA.r
+feh ~/Pictures/Wallpapers/moon.jpg
+cd MSDS/ds7349/homework/homework3/
+vim cracker.py
+notify-send hell r/unixporn!
+clear && colors
+herbstclient set focus_follows_mouse 0
+sh ~/.config/herbstluftwm/lemonpanel.sh
+cat Logistic/logreg.sas
+vim logreg.sas
+mkdir scratch
+which latexmk
+vim ~/.config/herbstluftwm/
+cd scratch/
+vim pfk.R
+xterm
+feh --bg-fill ~/Pictures/Wallpapers/cage.jpg
+feh --bg-tile ~/Pictures/Wallpapers/cage.jpg
+git remote add origin https://josephsdavid/experiment.git
+rm experiment/
+rm -rf
+mkdir experiment
+cd experiment
+touch test
+git remote add origin https://github.com/josephsdavid/experiment.git
+git commit -m "test"
+cd..
+rm -rf experiment/
+rm default.nix
+cat ~/F1_Racer/shell.nix > shell.nix
+nix search office
+vim ~/.config/zathura/zathurarc
+okular *.pdf
+15. A
+14. B
+13. D
+12. B
+11. C
+10. D
+9. B
+8. D
+7. Firewall
+echo 6. TLS
+15. A' >answers.md
+14. B
+13. D
+12. B
+11. C
+10. D
+9. B
+8. D
+7. Firewall
+echo '6. TLS
+cat answers.md
+vim answers.md
+vim EDA/EDA.Rmd
+cat EDA/EDA_4_19.Rmd | grep library
+vim EDA/EDA_4_19.html
+zathura EDA/EDA_4_19.pdf
+rm -rf scratch/
+git commit -m "almost done, just need to throw in the logistic regression section to EDA_4_19.Rmd"
+cat Logistic/logreg.sas >> EDA/EDA_4_19.Rmd
+git commit -m "Need more help with LDA and logistic interpretation"
+sudo nixos-rebuild edit
+systemctl stop dunst
+systemctl --user stop dunst
+xfce4-notifyd
+dmenu_run
+me
+mkdir ~/.config/dunst
+dunst
+pkill 26134
+notify-send hello r/unixporn!
+vim ~/.config/dunst/dunstrc
+pkill dunst
+dunst &
+rm ~/.config/dunst/dunstrc
+git commit -m "Ready for final conclusion"
+et 0:20:15
+et 0:20:15 &
+clea
+et
+echo 'nixpkgs.allowUnfree = true;' >~/.config/nixpkgs/config.nix
+echo 'nixpkgs.config.allowUnfree = true;' >~/.config/nixpkgs/config.nix
+rm ~/.config/nixpkgs/config.nix
+vim ~/.config/nixpkgs/config.nix
+nix-shell -p vscode
+nix search timer
+nix search clock
+nix search clock -u | less
+nix search clock -u
+nix search clock | less
+nix search clock | more
+nix search alarm
+nix-shell -p remind
+remind
+nix-shell -p qtalarm
+nix-shell -p wakeup
+nix-shell -p kalarm
+vscode
+code
+evince *.pdf
+evince *.pdf &
+sudo rm /etc/nixos/boot.nix
+cd /etc/nixos
+cat direnv.nix
+git commit -m "update attempt for modularity"
+xsetroot blue
+xsetroot 'blue'
+xsetroot -bg blue
+you --v
+vim ~/.config/herbstluftwm/scratchpad
+cd Netsectest/
+pandoc
+cat /etc/nixos/configuration.nix
+nix search resource
+cd .nix/store
+cd /nix/store
+vim 001idkld5p5lrj9drxdh2bvnjdm2v1mi-audit-stop.drv
+rm *.sql
+cd ds7330/
+cd ecommerce/
+cd MSDS7330_Wk4_InClassExercise_SQLandMWB_files/
+libreoffice & disown
+mongo -u root -p
+python sqlmongo.py
+mysqladmin -u root password MutantToast2
+python migrator.py
+vim migrator.py
+vim sqlmongo.py
+vim transporter.py
+mongoimport
+vim importer.sh
+chmod +x importer.sh
+importer.sh
+mongod
+use ecom
+use [ecom];
+cat dbfinal/importer.sh
+cat importer.sh
+cat importer.sh; tree
+man mongoimport
+cat importer.sh; tree > engels.txt
+cat importer.sh > engels.txt
+cat tree >> engels.txt
+tree >> engels.txt
+cat engels.txt
+end
+    echo "--"
+    echo "Take one down, pass it around, $suffix"
+    end
+        set suffix "no more beer on the wall!"
+        echo "1 bottle of beer on the wall, 1 bottle of beer."
+    else if math "$quant == 1" > /dev/null
+        end
+            set suffix "1 bottle of beer on the wall."
+        else
+            set suffix "$suffix bottles of beer on the wall."
+            set suffix (math "$quant - 1")
+        if math "$quant > 2" > /dev/null
+        echo "$quant bottles of beer on the wall, $quant bottles of beer."
+    if math "$quant > 1" > /dev/null
+for quant in (seq 99 -1 1)
+man math
+math '4<2'
+math '4<=2'
+math '4 <= 2'
+cd emergency/experiments/
+vim queries.py
+python queries.py
+cat results.txt
+python q.py > results.txt
+vim address.json
+vim results.txt
+vim customer.json
+vim oh.json
+bash importer.sh
+vim q.py
+tree > tree.txt
+. importer.sh
+python q.py > pyres.txt
+cat default.nix
+cat default.nix > shell.nix
+nix-build
+man default.nix
+man nix-build
+nix-build -v
+vim DJosephs_DS7330_Final.Rmd
+cd F1_Racer/reports/
+vim report.Rnw
+sh importer.sh
+python q.py
+direnv deny
+direnv dney
+nix-shell -p libreoffice-fresh
+pkill libreoffice
+vim plots.R
+cd dbfinal/
+vim *.Rmd
+ra
+neofetch | grep Disk > pre.txt
+sudo rm -rf *
+sudo vim /etc/nixos/services.nix
+cd us
+cd usr
+cd env
+env
+man slabtop
+slabtop
+sudo slabtop
+systemd-cgtop
+cd .mozilla/
+nix search chromium
+mkdir nixxer
+cd nixxer
+ld
+nix repl
+nix show-derivation /nix/store/f1pf9vmzs64v18phiy91pvyx6nv0fizr-roger.drv
+nix-store --realise /nix/store/f1pf9vmzs64v18phiy91pvyx6nv0fizr-roger.drv
+nix-shell -p glava
+vim ~/.config/glava
+glava --copy-config
+cd glava
+vim rc.glsl
+glava
+rm -f ~/.config/glava/
+rm -r ~/.config/glava/
+cat /home/david/tmp/shell.nix > shell.nix && cat /home/david/tmp/envrc > .envrc
+rm ~/.envrc
+fish_config
+cd advancedR/
+nix-shell -p mksh
+vim test.Rmd
+nix-shell -p shellcheck
+shellcheck twic.sh
+rm *.xbm
+rm scripts/prompt
+shellcheck scripts/* | wc -l
+shellcheck ~/.config/herbstluftwm/* | wc -l
+shellcheck ~/.config/herbstluftwm/lemonpanel | wc -l
+shellcheck ~/.config/herbstluftwm/lemonpanel.sh | wc -l
+shellcheck ~/.config/herbstluftwm/dzenpanel | wc -l
+shellcheck ~/.config/herbstluftwm/dzenpanel.sh | wc -l
+shellcheck ~/.config/herbstluftwm/minimize  | wc -l
+shellcheck ~/.config/herbstluftwm/maximize   | wc -l
+shellcheck ~/.config/herbstluftwm/scratchpad    | wc -l
+mksh
+sh ~/scripts/colors
+git log
+git log --pretty
+git log --pretty --
+git log --pretty --graph
+git log --pretty --graph --histogram
+git log log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+rm -r F1_Racer/
+rm -rf MainFrame_7349/
+mkdir tseries
+cp ~/F1_Racer/shell.nix shell.nix
+mkdir R
+vim sunspor.R
+mv sunspor.R R/sunspot.R
+mkdir Notes
+rm *.odt
+rm *.cls
+cd Logistic/
+rm *.html
+cd ML
+cd ML_cache/latex
+rm -rf reports/
+vim EDA/EDA_4_19.Rmd
+rm -rf F1_Racer/
+termite --geometry
+termite --geometry 12x12
+vim todo.md
+vim Notes/unit1/async.html
+zathura *.pdf
+cd unit1/
+abbr vnc 'sudoedit /etc/nixos/configuration.nix'
+abbr nrs 'sudo nixos-rebuild switch'
+aafire
+cowsay
+fortune
+man nix-env
+nix-shell -p xrandr-invert-colors
+xrandr-invert-colors --h
+xrandr-invert-colors --help
+man xrandr-invert-colors
+xrandr-invert-colors -h
+xrandr-invert-colors & disown
+nix search chess
+xrandr-invert-colors
+cd Programming/
+zathura LearnYouAHaskell.pdf
+mkdir drHaskell
+ping nixos.org
+ping https://nixos.org
+abbg
+abbr
+mkdir StartingOut
+vim questions.md
+ghce
+nix-shell -p tree
+neofetch | grep Memory; lsblk
+herbstclient set frame_gap 12
+feh --bg-fill graffiti.jpg
+systemctl start firewall
+nmcli
+nmcli connection show
+systemctl stop redshift
+sensors
+nvidia-smi
+xset s off -dpms
+vim ~/scripts/nix-search
+chmod +x ~/scripts/nix-search
+nix-search screenshot
+rm ~/scripts/nix-search
+nix search screenshot
+flameshot -h
+flameshot -
+flameshot
+maim -s ~/Pictures/screenshots/
+maim -h
+maim -s ~/Pictures/screenshots/(date +%s)
+cd ~/.config/ranger/
+rm ~
+vim rc.conf
+git commit -m "updated ranger"
+git commit -m "added maim"
+ls ~/.config
+krusader
+cd /
+nixos-rebuild --upgrade boot
+sudo nixos-rebuild --upgrade boot
+firefox & disown & exit
+bash & firefor &
+bash & firefox &
+cd learnR/
+la
+cd ds7349
+cd homework/
+cd Week6/
+vim cypher2.py
+cd homework3/
+cd MSDS
+mkdir pythontest
+cp ~/dbproject/shell.nix pythontest/shell.nix
+cd pythontest/
+systemctl statys
+cd ~/.config/
+cd ~/.config/termite
+termite -h
+termite -c paperconf
+termite -c ~/.config/termite/paperconf
+fish_default_key_bindings
+vim ~/learnR/shell.nix
+Iosevka
+vim ~/.config/herbstluftwm/lemonpanel.sh
+mkdir themes
+mv theme themes/moonthemes
+mkdir panels
+mv dzenpanel.sh panels/dzenpanel.sh
+mv lemonpanel.sh panels
+mkdir bin
+mv maximize bin
+mv floatsingle.sh bin
+mv minimize bin
+mv scratchpad bin
+ls -r
+ls -R
+mv moonthemes moontheme:w!
+mv moonthemes moontheme
+mv moontheme:w! moontheme
+bash ~/.config/herbstluftwm/autostart
+cd themes
+vim moontheme
+vim ~/.config/termite/config
+mkdir ~/.config/polybar
+cd polybar/
+polybar top
+vim ~/.config/herbstluftwm/panels/lemonpanel.sh
+cd ~/.config/polybar/
+vim config
+vim ~/.config/herbstluftwm/themes/moontheme
+herbstclient set window_gap 20
+herbstclient set frame_bg_active_color black
+herbstclient set frame_transparent_width 4
+herbstclient set frame_transparent_width 1
+herbstclient set frame_bg_active_1
+sh ~/.config/herbstluftwm/themes/papertheme
+pkill slack
+cd ~/.config/herbstluftwm/themes/
+chmod +x papertheme
+spotify & disown
+systemctl --user start  redshift
+systemctl --user stop  redshift
+git commit -m "rebase of herbstluft config"
+feh --bg-tile ~/Pictures/Wallpapers/matwalp.jpg
+herbstclient set window_gap 12
+feh ~/Pictures/Wallpapers/matwalp.jpg
+feh ~/Pictures/Wallpapers/matwalp.jpg & disown
+slack & disown
+sudo nixos-rebuild boot
+sudo nixos-rebuild --upgrade
+pkill panel
+rm 2019-04-29-003546_1920x1080_scrot.png
+rm 2019-04-29-003641_1920x1080_scrot.png
+mkdir DDS
+echo '$acpi' | lemonbar
+echo '$acpi' | dzen2
+pkill lemonbar
+pkill dzen2
+nix search darling
+nix search ipadian
+kvm
+qemu
+qemu-aarch64
+nix search phone
+nix search reddit
+nix search youtube
+nix search porn
+amixer
+nix search alsa
+xrandr --auto
+fc
+nix search oomox
+nix search gtk
+nix search gtk config
+nix search gtk theme
+herbstclient raise_monitor -1
+herbstclient raise_monitor 0
+herbstclient stack | lsd
+herbstclient stack | lolcat
+herbstclient stack
+dmenu_run -fn Iosevka 14
+dmenu_run -fn "Iosevka 14"
+dmenu_run -fn "Iosevka 24"
+dmenu_run -fn "Iosevka Term 24"
+dmenu_run -fn "envy code r"
+dmenu_run -fn "iosevka"
+dmenu_run -fn "iosevka 14"
+dmenu_run -fn "iosevka term" -l 20
+dmenu -h
+vim lemonpanel.sh
+cd ~/.config/herbstluftwm/panels/
+mv lemonpanel.sh lemonpanel
+mv dzenpanel.sh dzenpanel
+mv floatsingle.sh floatsingle
+tree -c
+vim wselect
+chmod +x wselect
+./wselect
+vim keybinds
+cd ~/nixfiles/
+git commit -m "the great rewrite"
+cd herbstluftwm/
+nix search 2048
+nix-shell -p tuxkart
+nix search kart
+nix-shell -p superTuxKart
+supertuxkart
+rang
+shellcheck *
+clear && tree -C
+rm -r MSDS
+rm -rf MSDS
+clear && tree -C -d
+tree -C -d
+cd drHaskell/
+cd StartingOut/
+cd nixfiles/herbstluftwm/panels/
+rm *.sh
+git commit -m "removed *.sh in herbst"
+ps aux
+vim ~/.config/neofetch/config.conf
+cd Pictures/Wallpapers/
+neofetch --w3m ~/Pictures/Wallpapers/graffiti.jpg
+home-manager switch --upgrade
+w3m reddit.com
+ls /nix/store/*
+nix-shell -p nix-du
+nix-du
+man nix-du
+nix-du -h
+nix-shell -p nix-du tred
+tred
+ghcu
+nix search game
+nix search gameboy
+nix search nintendo
+nix-shell -p desmume
+desmume
+1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+libinput
+poweroff1
+1ghci
+feh --bg-fill ~/Pictures/Wallpapers/graffiti.jpg
+git commit -m "updated scripts dir"
+nix-shell -p
+cd 1..
+git clone https://github.com/josephsdavid/MSDS.git
+cd MSDS/MSDS6371
+cd FinalExam/
+cd Review/
+cat *.tex | wc-l
+ls Homework2/
+ls Homework3
+ls HW5/
+cat *.tex | wc -l
+cat *.sty | wc -l
+cat *.tex | wc
+cd Week12/
+cat *.Rnw
+cat *.Rnw | w
+cat *.Rnw | wc
+cat *.Rnw | wc -l
+nix-shell -p tesseract-ocr
+nix search ocr
+nix-shell -p tesseract_4
+cd Pictures/screenshots/
+tesseract test.png
+tesseract test.png test.txt
+vim test.txt.txt
+neofetch |scratch.txt
+neofetch > scratch.txt
+vim scratch.txt
+rm scratch.txt
+tesseract test.png test
+cat test.txt
+git commit -m "adding time series"
+vim Readme.md
+git commit -m "updated readme"
+cp ~/tmp/shell.nix shell.nix
+git commit -m "created reproducible environment"
+git commit -m "fixed typos"
+git commit -m "added R function for testing stationarity condition 3"
+cat ~/Downloads/10_year_bond_rate_2010-2015.csv
+git commit -m "fixed stationarity condition 3 function"
+git commit -m "added vxbar function from unit 1.9 (will be fixed if we decide it is broken)"
+git commit -m "added confidence intervals to vxbar"
+mkdir prelive
+mkdir unit1
+vim australia.csv
+vim melbournemaxtemp1971.csv
+vim results.md
+cd prelive
+cd unit1
+vim prelive.R
+nix search dunstify
+)
+  xbacklight -get | cut -d '.' -f 1
+notify-send (
+bright up
+bright down
+man notify-send
+notify-send -h
+cd ~/scripts/
+chmod +x popup
+popup
+bash popup
+shellcheck popup
+chmod +x lemonvol
+vim lemonvol
+nix search killall
+killall -l
+date %t
+time
+date + "%T"
+date +"%T"
+killall -y (date +"%T")
+man killall
+date +"%I s"
+date +"%Ih"
+acpi
+nix search xdppy
+nix search xdpy
+lemonvol 1
+herbstclient keybind Mod4+P spawn ~/scripts/lemonvol 0
+herbstclient keybind Mod4+p spawn ~/scripts/lemonvol 0
+herbstclient keybind Mod4+p spawn ~/scripts/lemonvol 1
+lemonvol 0
+popup (acpi)
+herbstclient spawn /home/david/scripts/lemonvol 0
+herbstclient spawn /home/david/scripts/popup
+herbstclient spawn /home/david/scripts/popup acpi
+vim ~/scripts/lemonvol
+vim ~/scripts/bright
+111111111111111111111111111111111111111111111111111111111111
+1elvmnbc ohdsa
+herbstclient spawn /home/david/scripts/popup (xbacklight -get)
+chmod +x vol
+vol +5
+herbstclient spawn /home/david/scripts/vol up
+vol down
+vim vol
+vol mute
+vol down &
+vol1 up
+vol up
+1gfhgfhftts1ts htrd f1gtrsd1 sd gtsdfhyte1tgtd1hhdfxg1trdsfbgyhfb1j1g
+1gs.kj11xz1gjfd1/2q1212123212322e321
+e
+git commit -m "added nice volume notifica1tions"
+cp ~/nixfiles/scripts/ scripts
+cp -r ~/nixfiles/scripts/ scripts
+;s
+alsamixer
+cd Books/
+cd School/
+zathura TimeSeries.pdf
+vim something
+vim ~/scripts/popup
+git commit -m "finished lemonbar volume"
+fc-list | grep Iosevka
+ping reddit.com
+systemctl start NetworkManager
+vim ~/scripts/vol
+maim -s ~/Pictures/screenshots/(date +%s).png
+mkdir hwives
+cd hwices
+rm shell.nix
+nice
+man nice
+herbstclient set window_gap 8
+herbstclient set window gap 0
+xclip -o | awk '{getline b:printf("%s,%s\n",$0,b)}'
+xclip -o | awk '{getline b;printf("%s,%s\n",$0,b)}'
+xclip --out
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>hwives/OC7.csv
+cat hwives/OC7.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>hwives/OC8.csv
+cat hwives/OC8.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>hwives/OC9.csv
+cat hwives/OC9.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>hwives/OC10.csv
+cat hwives/OC10.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>hwives/OC11.csv
+cat hwives/OC11.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>hwives/OC12.csv
+cat hwives/OC12.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>hwives/OC13.csv
+cat hwives/OC13.csv
+vim *.csv
+cat OC13.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>hwives/BH13.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>hwives/BH6.csv
+rm BH13.csv
+cat BH6.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>BH7.csv
+cat BH7.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>OH9.csv
+vim OH9.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>OH13.csv
+vim OH13.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>OH12.csv
+vim OH12.csv
+vim BH8.csv
+vim OC13.csv
+vim OC12.csv
+vim OC9.csv
+cat ATL3.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL5.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL6.csv
+cat ATL6.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL7.csv
+cat ATL7.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL8.csv
+cat ATL8.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL9.csv
+cat ATL9.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL10.csv
+cat ATL10.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL1.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL2.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL3.csv
+vim ATL4.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL4.csv
+xclip -i ~/scratch; xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL4.csv
+cat ATL4.csv
+cat ~/scratch |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL1.csv
+cat ATL1.csv
+cat ~/scratch |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL2.csv
+cat ATL2.csv
+cat ~/scratch |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL3.csv
+cat ~/scratch |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL4.csv
+cat ~/scratch |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>ATL5.csv
+cat ATL5.csv
+vim ATL6.csv
+vim ATL7.csv
+cd ATL
+vim ATL1.csv
+vim ATL2.csv
+vim ATL3.csv
+cat ATL*.csv >Atlanta.csv
+libreoffice Atlanta.csv
+vim Atlanta.csv
+xclip -o |tr "," " "|tr "\t" ","|tr "[*],""" | awk '{getline b;printf("%s,%s\n",$0,b)}'>NY1.csv
+xclip -o |tr "," " "|tr "\t" ","|tr "[*]," "" | awk '{getline b;printf("%s,%s\n",$0,b)}'>NY1.csv
+xclip -o |tr "," " "|tr "\t" ","|tr "[*]," " " | awk '{getline b;printf("%s,%s\n",$0,b)}'>NY1.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>NY1.csv
+cat NY1.csv
+rm NY1.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>NY3.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>NY4.csv
+cat NY4.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>NY5.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>NY6.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>NY7.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>NY8.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>NY9.csv
+cat scratch.csv | tr "\[(.*?)\]" " "
+cat ~/scratch.csv | tr "\[(.*?)\]" " "
+cat ~/scratch | tr "\[(.*?)\]" ""
+cat ~/scratch | tr "\[(.*?)\]" "," |tr ",," ","
+cat ~/scratch | tr "\[(.*?)\]" ","
+cat ~/scratch | tr "\[(.*?)\]" "\\"
+cat ~/scratch
+cat ~/scratch | tr "[(.*?)]" " "
+cat ~/scratch | tr "\[(.*?)\]" " "
+cat ~/scratch > NY10.csv
+vim NewYork.csv
+vim NY10.csv
+cat NY*.csv > NewYork.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>DAL1.csv
+cat DAL1.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>DAL2.csv
+cat DAL2.csv
+xclip -o |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>DAL3.csv
+xclip -o |tr "," " "|tr "\t" ",">DAL3.csv
+vim DAL3.csv
+cat DAL*.csv
+cat DAL*.csv > dallas.csv
+xsv sample dallas.csv
+xsv header dallas.csv
+xsv head dallas.csv
+xsv cat dallas.csv | xsv table
+cat dallas.csv | xsv table
+vim paster.sh
+chmod +x paster.sh
+./paster.sh > MI1.csv
+./paster.sh > MI2.csv
+./paster.sh > MI3.csv
+cat MI*.csv > Miami.csv
+xsv table Miami.csv
+vim Miami.csv
+cat Miami.csv | xsv table
+cat ~/scratch |tr "," " "|tr "\t" ","| awk '{getline b;printf("%s,%s\n",$0,b)}'>NJ1.csv
+vim NJ1.csv
+./paster.sh > NJ2.csv
+xsv table Atlanta.csv
+vim NJ2.csv
+xsv table NJ2.csv
+./paster.sh > NJ3.csv
+vim NJ5.csv
+vim NJ4.csv
+vim NJ3.csv
+./paster.sh > NJ6.csv
+vim NJ6.csv
+./paster.sh > NJ7.csv
+vim NJ7.csv
+./paster.sh > NJ8.csv
+vim NJ8.csv
+./paster.sh > NJ9.csv
+vim NJ9.csv
+cat NJ*.csv NewJersey.csv
+cat NJ*.csv >NewJersey.csv
+xsv table NewJersey.csv
+./paster.sh > DC.csv
+vim DC.csv
+./paster.sh > test.csv
+vim test.csv
+cat paster.sh
+herbstclient set frame_gap 0
+cat hwives.R
+cat hwives.R > work.R
+rm "csv's.zip"
+ls data
+herbstclient set frame_gap 3
+cd data
+cd hwives/
+tree -C
+herbstclient set frame_gap 8
+clear && neofetch
+herbstclient object_tree
+herbstclient list_commands
+herbstclient get_attr
+herbstclient get_attr clients.
+herbstclient get_attr.clients.
+herbstclient get_attr clients
+herbstclient complete_shell
+herbstclient complete
+herbstclient getenv
+herbstclient tree
+herbstclient layout
+nix search playon
+systemctl status NetworkManager
+playonlinux
+nix search virt
+nix-shell -p virt-manaer
+nix-shell -p virt-manager
+VirtualBox
+sudo nixos-rebuild switch && systemctl restart NetworkManager && nix-collect-garbage -d
+cd cleaning/
+cd ~/Useful-R-Functions/
+vim EDAfun.R
+cd nixfiles
+nix search qemu
+git remote add origin https://github.com/josephsdavid/tseries.git
+rm *.tex
+prevd
+git commit -m "Initial commit"
+cd drHaskell/st
+cd ~/.config/herbstluftwm/bin
+vim floatsize
+herbstclient chain . toggle_floating . spawn ~/.config/bin/floatsize
+herbstclient chain . floating toggle . spawn ~/.config/bin/floatsize
+chmod +x floatsize
+ls dmesg
+neofetch cpu 2>/dev/null
+xwindowattributes
+nix-shell -p xwindowattributes
+XGetWindowAttributes
+herbstclient list_monitors
+mkdir notifytest
+cd notifytest/
+nix shell
+vim main.go
+go help gopath
+export GOPATH=$HOME/notifytest/go
+mv main.go go
+cd go
+rm notifytest
+rm -r notifytest
+git clone https://gitlab.com/diamondburned/lemongo/tree/master.git
+git clone https://gitlab.com/diamondburned/lemongo.git
+mkdir go
+export GOPATH=$HOME/go
+go get https://gitlab.com/diamondburned/lemongo
+cd lemongo/
+cd cmd
+cd notify/
+go build
+./notify
+./notify.sh
+vim notify.sh
+`./notify | ./notify.sh`
+./notify | ./notify.sh
+hello | ./notify.sh
+echo "hello" | ./notify.sh
+./sleep
+systemctl --user stop redshift
+systemctl --user start redshift
+cava
+colors
+git clone https://github.com/drake-smu/UnintCS01.git
+git clone https://github.com/drake-smu/UnintCS02.git
+nix search rPackages.k
+nix search rPackages
+vim hwives.R
+vim work.R
+vim ~/.config/herbstluftwm/lemonpanel
+lsblk
+mkdir penguin
+sudo mount /dev/sda1 ~/penguin
+cd penguin/
+mv ~/Downloads/*.gif penguin
+sudo mv ~/Downloads/*.gif penguin
+cp ~/Downloads/*.gif penguin
+chown penguin david
+chown david penguin
+sudo chown david penguin
+hwives
+cat work.R
+cat work.R | grep library
+vim hwives/shell.nix
+git commit -m "update"
+vim ~/.config/herbstluftwm/panels/lemonpanel4
+cat *.r | grep library
+vim HWivesSentiment.R
+mkdir datamining
+cp ~/Useful-R-Functions/shell.nix shell.nix
+nix search scipy
+which cmake
+which neo4j
+which go
+mysql -u root -p
+mongo
+systemctl --user start mongodb
+mongo start
+neo4j
+go
+cmake
+which mongodb
+which mysql
+nix search python37Packages.future
+nix search sklearn
+nix search python37Packages.glob
+nix search skimage
+nix search dato
+nix search python37Packages.dato
+nix search python37Packages.graph
+vim ~/hwives/shell.nix
+which python
+pypi2nix
+pypi2nix -V "3.7" -e graphlab
+pypi2nix -V "pypy" -e graphlab
+man buildPythonPackage
+vim graphlab.nix
+nix search graphlab
+nix search python37Packages.sql
+nix search scikit
+nix search pprint
+nix-shell -p pypi2nix
+pypi2nix -V "pypy" -e sqlite3
+nix search anaconda
+nix search conda
+conda install pip
+conda-install pip
+rm .conda
+cd .conda
+nix-shell -p python37 conda
+nix shell -p conda
+nix-shell -p conda
+conda-shell-4.3.31
+rm -rf .conda
+nix search sqlite
+herbstclient pad 0 0
+feh --bg-fill ~/Pictures/Wallpapers/mar.jpg
+chmod +x randomizer.sh
+randomizer.sh
+herbstclient quit
+cd scripts
+vim randomizer.sh
+pkill randomizer.sh
+killall randomizer
+vim ~/.config/termite/paperconf
+pkginfo --footprint "$TARGET"
+l
+git commit -m "Finished some pre class calculations"
+git clone https://github.com/jbrittain72/DataMiningNotebooks.git
+jupyter 0.\ Python_Intro.ipynb
+nix search rmagic
+nix search rpy2
+exi
+nix search simplegeneric
+which pip
+pip
+nix search ipython
+vim test.py
+rm test.py
+vim 01.\ Pandas.ipynb
+rm test.sh
+fzf
+ghci
+vim ~/.config/herbstluftwm/panels/dzenpanel
+vim tseries/Notes/unit1/async.html
+vim tseries/Notes/unit1/async.Rmd
+curl https://wttr.in/
+cd Project/
+vim HwivesAnalysis.R
+vim todo
+mv todo tmp
+rm dbproject/
+rm -rf dbproject/
+git clone https://github.com/josephsdavid/rnd-ds.git
+cp ~/datamining/shell.nix shell.nix
+nix search bs4
+git commit -m "dave's python environment"
+git commit -m "getting things up and running, TODO: Rick add csvs"
+cd F1_Racer/
+cd EDA
+vim EDA_4_19.Rmd
+cd tseris
+which latex
+cd Work/
+nix search vim csv
+vim BLTs.csv
+rm BLTs.csv
+rm 402
+rm -rf 402
+mkdir BLTs
+cd BLTs/
+mkdr 402
+mkdir 402
+mkdir 407
+mkdir 408
+cd 402
+cd 407
+cd 408
+vim week1.csv
+vim hours.csv
+vim hours.md
+vim ~/tmp/todo
+vim BLTs/402/week1.csv
+unzip *.zip
+vim Sean\ Kennedy_HomeWork1.nb.html
+vim Sean\ Kennedy_HomeWork1.Rmd
+vim Data\ Load\ \&\ Summary.ipynb
+git commit -m "getting back into python"
+sudo nixos-rebuid switch
+vnc1
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable unstable
+sudo nix-channel --remove unstable
+nix search linuxPackages
+nix search kernel
+sudo nix search kernel
+nixos-rebuild switch
+su root
+nt,MpN2L
+sudo nix-channel --add https://nixos.org/channels/nixos-19.09 nixos
+sudo nix-channel --add https://nixos.org/channels/nixos nixos
+sudo nix-channel --add https://nixos.org/channels/nixos-19.02 nixos
+sudo nix-channel --add https://nixos.org/channels/nixos-19.03 nixos
+sudo nix-channel --update
+sudo vim /etc/nixos/configuration.nix
+8195 store paths deleted, 12338.80 MiB freed
+xinput list
+1
+vim test.sh
+xinput set-prop 13 "Device Enabled" 0
+systemd-analyze
+systemd-analyze blame | wc -l
+fff
+cat *.R | grep library
+nix search factorio
+xinput set-prop 13 "Device Enabled" 1
+evince ~/Books/School/TimeSeries.pdf
+vim Unit1HW.Rmd
+evince ~/Books/School/TimeSeries.pdf & disown
+cd ts
+vim Notes/unit1/async.Rmd
+cd Notes/unit1/
+cat test
+rm 1
+vim test
+rm test
+groff
+troff
+sudo nix-channel --list
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+nix-channel --remove nixos
+sudo nix-channel --remove nixos
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable-small nixos
+sudo nixos-rebuild switch --upgrade
+feh --randomize --bg-fill ~/Pictures/Wallpapers/papertheme/
+dmesg
+nix search doom
+ping google.com
+~/.emacs.d/bin/doom quickstart
+emacs ~/tseries
+cd core
+cd docs/
+updateDoom
+abbr updateDoom  '/home/david/.emacs.d/bin/doom -y re'
+emacs ~/.emacs.d/bin/doom/init.el
+cd ~/.emacs.d
+vim init.example.el
+xclip -o
+cat init.example.el | xclip -i
+cat init.el init.example.el
+cat init.el init.example.el > init.el
+vim ~/.emacs.d/init.el
+bin/doom doctor
+rm *
+rm -rf *
+rm -rf ~/.emacs.d/
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+.emacs.d/bin/doom quickstart
+ls fonts
+cd config/
+emacs
+emacs *.org
+bin/doom update
+/home/david/.emacs.d/bin/doom -y re
+emacs ICA1_DataMining-PartA.ipynb
+vim packages.el
+cd .emacs.d/
+cd modules/
+cd lang/
+cd python/
+vim python.el
+cd .emacs.d/modules/lang/
+cd org
+cd autoload/
+vim ipython.el
+cd rnd-ds/
+cd .doom.d/
+vim init.el
+vim config.el
+cd Notes
+mkdir unit2
+cd unit2
+cat ../unit1/async.Rmd | head
+cat ../unit1/async.Rmd | head > async.Rmd
+mv compositesine.R  Notes/unit2/compositesine.R
+discord
+Discord
+pkill Discord
+killall Discord
+man herbstluftwm
+cp ~/Work/homework/homework1/Sean\ Kennedy_HomeWork1.Rmd
+cp ~/Work/homework/homework1/Sean\ Kennedy_HomeWork1.Rmd test.Rmd
+Rstudio
+arandr
+mv .screenlayout/2monhome.sh scripts
+vim scripts/2monhome.sh
+xrandr --auto; herbstclient reload
+herbstclient attr
+herbstclient attr theme.
+herbstclient lock
+herbstclient unlock
+mkdir raisin
+cp ~/tseries/shell.nix shell.nix
+nix search build-essential
+nmtui-connect
+nmtui
+nix-shell -p nm-applet
+nix search networkmanager
+nix-shell -p networkmanagerapplet
+nm-connection-editor
+nm-applet
+man nm-applet
+nix-shell -p networkmanagerqt
+nix-shell -p networkmanager-qt
+mkdir .private
+cp xhamster.com_4304263_joanna_angel_lemon_stealing_whore_240p.mp4 .private/lemons.mp4
+nix-search video player
+nix search video player
+mv SpankBang_dani+daniels+sinn+sage+lesbian+intense_720p.mp4 .private/sinndani.mp4
+vim ~/.config/herbstluftwm/panels/lemonpanel
+vim scratch
+rm scratch
+vim scratch.sh
+rm scratch.sh
+gonvim
+nix-shell -p gonvim
+nix-search vim qt
+nix search vim qt
+cd raisin
+nasm -f bin -o myfirst.bin myfirst.asm
+dd status=noxfer conv=notrunc if=myfirst.bin of=myfirst.flp
+qemu-system-i386 -fda myfirst.flp
+vim myfirst.asm
+vim .gitignore
+mv -r raisin raisinOS
+mv  raisin raisinOS
+cd raisinOS/
+git remote add origin https://gitlab.com/RaisinOS/raisinos.git
+git commit -m "initial commit"
+encryptr
+mpv sinndani.mp4
+git pull
+nix search geniso
+nix search gen
+nix search iso
+nix search xor
+nix search xorrisofs
+nix search -u xorrisofs
+nix search iso image
+nix search xorriso
+rm myfirst.*
+vim grape.asm
+R
+unzip Untitled_Message.zip
+mkdir test
+mv TxDOT.csv test/
+mv FinalExam.R test
+cd test/
+nix-shell -p skype
+cd hwives
+cd test
+vim FinalExam.R
+screenkey
+killall screenkey
+pkill screenkey
+herbstclient use_index 1
+vim ~/.config/nixpkgs/vim.nix
+vim ~/.config/fish/config.fish
+git clone https://github.com/drake-smu/MainFrame_7349.git
+cd MainFrame_7349/
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+abbr gl git log
+curl cht.sht/regex
+http://cht.sh/regex
+curl http://cht.sh/regex
+curl http://cht.sh/sed
+git reflog
+cd scripts/
+vim keyboard.sh
+cd tmp
+vim lemonkey
+nix search colorutils
+nix search perl graphics
+nix search perl
+nix-shell -p hollywood
+herbstclient chain . xrandr --auto . reload
+herbstclient chain . spawn xrandr --auto . reload
+herbstclient spawn /home/david/scripts/2monhome.sh
+ls scripts/
+vim ~/.config/herbstluftwm/keybinds
+herbstclient reload
+nix-shell -p nix-index
+nix-locate
+nix-locate libALSA.so
+nix-index
+nix-shell -p python35
+git clone https://github.com/nixnest/deepfry.git
+cd deepfry/
+nix-shell -p make
+nix-shell -p gnumake
+vim Makefile
+make
+cd -
+man ffsend
+ffsend
+ffsend help
+herbstclient set_layout grid
+cd bin
+vim dialoglistener
+chmod +x dialoglistener
+herbstclient set default_frame_layout max
+herbstclient set default_frame_layout 2
+notify-send test\n "poopoo"
+rm ~/.config/herbstluftwm/rules
+gotop
+vim maths.Rmd
+mv lescuffs.mp4 .private/
+ls .private/
+vim async.Rmd
+nix search pandas
+vim Notes/unit2/async.Rmd
+vim parzen.R
+herbstclient set window_gap 0
+herbstclient set frame_gap 6
+cd prelive/uni2
+cd ../..
+cd prelive/unit2
+vim spectral.R
+libreoffice
+cd Homework/
+zathura ~/Books/School/TimeSeries.pdf & disown
+cd Videos/
+cd .private/
+mpv lescuffs.mp4
+herbstclient list_keybinds
+jupyter notebook
+nix search autodata
+cd Useful-R-Functions/
+vim ts.
+vim ts.R
+herbstclient set default_frame_layout 4
+herbstclient set default_frame_layout 3
+pkill libreoffice-fresh
+killall libreoffice
+killall libreoffice-fresh
+rm *.odp
+cd Notes/unit2/
+vim inclass.Rmd
+bc
+nix-shell -p python37
+python
+vim inclass.R
+cd Lectures/
+vim Walmart.csv
+vim Walmart.R
+vim ../shell.nix
+cd ..; nix-shell; cd Lectures
+cd tseries
+vim Lectures/Walmart.R
+git clone https://github.com/josephsdavid/dbproject.git
+cd dbproject/
+vim Useful-R-Functions/ts.R
+git clone https://github.com/BivinSadler/MSDS-6373-Time-Series.git
+git branch daviddev
+git checkout daviddev
+cd Unit\ 1/
+vim vxbar.R
+git push origin daviddev
+nix-env hello
+nix-env -iA hello
+nix-env -iA nixpkgs.hello
+hello
+cat ~/Useful-R-Functions/shell.nix >shell.nix
+nix-shell > res
+nix-shell 2> res
+vim res
+git push
+git push --set-upstream origin daviddev
+cp MSDS-6373-Time-Series/Unit\ 1/vxbar.R vxbar.R
+rm -rf MSDS-6373-Time-Series/
+git clone https://github.com/josephsdavid/MSDS-6373-Time-Series.git
+mv vxbar.R MSDS-6373-Time-Series/Unit\ 1/
+git commit -m "functions for vxbar and vxbar confidence intervals"
+vim Downloads/error.txt
+cat shell.nix
+which gfortran
+nix search gfortran
+nix search linker
+cat shell.nix | grep packages
+cat shell.nix | grep Packages
+nix search libiconv
+nix searh R
+nix search R
+nix-env --list
+nix-env -qa R
+nix-shell -p nix-info --run "nix-info -m"
+nix-shell -p nix-info
+nix-info -m
+man nix-channel
+nix-channel --add https://nixos.org/channels/nixpkgs-19.09pre178895.9ebc6ad944c test
+nix-channel --remove test
+history > history.txt
+vim history.txt
+cd datamining
+nix-collect-garbage -d
+which R
+sudo nix-collect-garbage
+sudo nix-collect-garbage -d
+jupyter notebook & disown
+nix-shell -p movgrab
+youtube-dl https://www.pornoeggs.com/watch?v=xcnwz-z8Cjy
+man youtube-dl
+nix-shell -p youtube-dl
+curl https://v1.paradisehill.cc/video/011115-1726-10_part1.mp4 --output girltrainp1.mp4
+mpv *.mp4
+mpv *
+rm *.mp4
+killall firefox
+pkill firefox
+top
+killall python
+killall python37
+killall python3.7
+nix search netflix
+vim ~/.config/herbstluftwm/autostart
+cd DDS/
+uptime
+uptime -h
+uptime --help
+dd if=/dev/random
+dd if=/dev/urandom
+rm history.txt
+libreoffice *.pptx
+cd nixfiles/
+git commit -m "cleaned up"
+vim ~/.config/herbstluftwm/themes/papertheme
+cd ~/.config/herbstluftwm/
+vim autostart
+cd ../DDS
+cd HW2Updated/
+zathura *.pdf & disown
+nix-shell -j 8 evince
+evince *.pdf & disown
+vim knitr_cars.Rmd
+cat *.R
+cat *.Rmd
+vim red
+rm red
+rm This\ Week\ in\ Data\ Science.pptx
+home-manager upgrade
+home-manager list
+nix-channel --rollback
+vim ~/.config/nixpkgs/home.nix
+nix-shell -p python37Packages.jupyterlab
+nix search jupyter-r
+nix search jupyter kernel
+nix search ipydata
+mv default.nix test
+mv test shell.nix
+nix search thunar
+vifm
+nix search file manager
+pcmanfm
+cd Downloads/
+unzip SAS\ and\ R\ -\ Ken\ Kleinman\ -\ \ 2014.zip
+7z SAS\ and\ R\ -\ Ken\ Kleinman\ -\ \ 2014.zip
+man 8z
+man 7z
+7z -e SAS\ and\ R\ -\ Ken\ Kleinman\ -\ \ 2014.zip
+7z e SAS\ and\ R\ -\ Ken\ Kleinman\ -\ \ 2014.zip
+zathura SAS\ and\ R\ -\ Ken\ Kleinman\ -\ \ 2014.pdf
+nix-channel --add https://nixos.org/channels/nixpkgs-stable nixpkgs
+nix-channel --remove nixpkgs
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+nix-channel --list
+nix-collect-garbage
+jupyter-lab
+cd .jupyter/
+cd lab
+cd user-settings/@jupyterlab/
+nix search jupyter
+mv shell.nix default.nix
+mkdir lab
+nix-shell -j 12 --command "jupyter lab"
+nix-shell --command "jupyter lab"
+recorder -n
+cd drHaskell/StartingOut/
+vim baby.hs
+home-manager generations
+reboot
+home-manager switch 180
+nix-channel --update
+nix-env -u *
+nix-env -u '*'
+vim
+bash
+nano ~/.config/nixpkgs/home.nix
+tree
+nix-prefetch-url https://github.com/jalvesaq/Nvim-R
+nix-prefetch-url --unpack  https://github.com/jalvesaq/Nvim-R
+nix-prefetch-url   https://github.com/jalvesaq/Nvim-R
+nano ~/.config/nixpkgs/vim.nix
+cachix authtoken eyJhbGciOiJIUzI1NiJ9.eyJkYXQiOjI0MzJ9.irPc7Ngz6IwTmJ7cZQlQ_YO7T3TrooKwPqHPx4YYyBw
+cachix generate-keypair msds
+cat ~/.config/cachix/cachix.dhall
+cachix use jupyterwith
+sudoedit /etc/nixos/services.nix
+sudoedit /etc/nixos/configuration.nix
+sudo nixos-rebuild switch
+systemctl restart NetworkManager
+cat result
+cat result | docker load
+sudo docker login
+ncdu
+vim datamining/docker.nix
+sudo docker rmi jupyter-image
+nix-shell -j 8
+neofetch
+nix-shell -j 8 --command "jupyter-lab & disown"
+nix-shell -j 8 --command "jupyter-lab"
+vim datamining/shell.nix
+which gcc
+nix search gcc
+nix-shell -p google-chrome
+google-chrome
+nix-shell -p google-chrome --run
+nix-shell -p google-chrome --run google-chrome-stable
+home-manager switch
+google-chrome-stable
+home-manager edit
+mpv
+shellcheck * | wc -l
+obs
+htop
+xsv
+hexchat
+qutebrowser
+vim docker.nix
+nix-build docker.nix
+sudo docker load jupyter-image
+docker load jupyter-image
+cat result | sudo docker load
+sudo docker tag jupyter-image josephsdavid/msds-datamining
+sudo docker push josephsdavid/msds-datamining
+sudo docker run e51ed3931ed6 -p 8888:8888
+sudo docker run e51ed3931ed6
+sudo docker run josephsdavid/msds-datamining:latest
+sudo docker run josephsdavid/msds-datamining:latest -p 8888:8888
+docker images
+sudo docker images
+sudo docker rmi josephsdavid/msds-datamining
+sudo docker rmi 88a1ffbcd2dd
+sudo docker pull josephsdavid/msds-datamining
+systemctl stop firewall
+sudo docker run josephsdavid/msds-datamining
+s
+sudo docker run jupyter-image
+sudo docker run -p 8888:8888 josephsdavid/msds-datamining
+sudo docker run -p 8888:8888 -v $pwd josephsdavid/msds-datamining
+sudo docker run -v /home/david/datamining -p 8888:8888  josephsdavid/msds-datamining
+cd DataMiningNotebooks/
+pwd
+man docker run
+vim  docker.nix
+docker run -p 8888:8888  --name 7331 -v {$PWD}:/data josephsdavid/msds-datamining
+sudo docker run -p 8888:8888  --name 7331 -v {$PWD}:/data josephsdavid/msds-datamining
+sudo docker run -p 8888:8888  -v {$PWD}:/data josephsdavid/msds-datamining
+chromium
+man nix-shell
+nix-shell default.nix
+rm result
+nix-build default.nix
+vim default.nix
+nix-build shell.nix
+nix-shell
+nix-shell -j 0
+exit
+jupyter-lab & disown
+poweroff
+gotop -p -b -s
+rm *.zip
+cd DDS
+nix-shell -j 12
+rstudio
+clear
+git clone https://github.com/josephsdavid/F1_Racer.git
+mkdir testrepo
+cd testrepo/
+git init
+git remote add origin https://github.com/josephsdavid/testrepo.git
+ls -a
+git commit -m "added README.md"
+rm -rf testrepo
+git clone https://github.com/josephsdavid/testrepo.git
+git pull origin master
+cat README.md
+git branch development branch
+git branch developmentbranch
+git checkout developmentbranch
+vim test.R
+git commit -m "added a test R file to development branch"
+git push origin developmentbranch
+git checkout master
+git merge developmentbranch
+git commit -m "merge"
+git log --graph --pretty=format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset --abbrev-commit
+git clone  https://github.com/josephsdavid/MSDS-6306-Doing-Data-Science.git
+cd MSDS-6373-Time-Series/
+ranger
+vim test.md
+ls md
+mv test.md ~/MSDS-6306-Doing-Data-Science/
+cd ~/MSDS-6306-Doing-Data-Science/
+git add .
+git commit -m "added a test file for office hours"
+git push origin master
+cd ..
+cd testrepo
+echo 'bdshfjgadlhfuigahfiuefuiperhgpg' > README.md
+git reset --hard origin master
+git reset --hard origin/master
+vim README.md
+killall zoom
+killall slack
+cat * | wc -l
+cat -r * | wc -l
+man cat
+cat
+cat hello
+cd scikit_learn_data/lfw_home/
+tac
+tac *
+cat *
+cd
+rm scikit_learn_data/
+rm -rf scikit_learn_data/ MSDS-6306-Doing-Data-Science/
+git clone https://github.com/drake-smu/DS6373.git
+cd datamining/
+ls
+vim shell.nix
+cp shell.nix ~/DS6373/
+cd
+cd DS6373/
+ls
+echo test 1 > test.txt
+echo test 2 > test.txt
+echo test 3 > test.txt
+cat test.txt
+rm test.txt
+ls
+git add .
+git commit -m "added shell.nix with jupyter and non jupyter support"
+git push origin master
+ls
+cd
+cd datamining/
+vim docker.nix
+home-manager edit
+cd MSDS-6373-Time-Series/
+git remote add upstream https://github.com/BivinSadler/MSDS-6373-Time-Series.git
+git fetch upstream
+git checkout master
+git rebase upstream/master
+ls
+echo history>history
+history > history
+tac history > history
+vim history
+history > history.txt > tac
+tac
+tac history.txt
