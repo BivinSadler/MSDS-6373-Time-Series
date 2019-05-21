@@ -1,3 +1,4 @@
+library(tswge)
 gen.nonstat  <- function(n,phi){
 	x <- rep(0,n)
 	a <- rnorm(n)
