@@ -1,10 +1,7 @@
 This is the ReadMe for Unit 4!
 
-Suggested Reading
-Hi Class! 
+# **Suggested** Reading
 
-I am getting the readings out late this week thus these will be "Suggested Reading" and I will not test on anything covered in the reading that was not covered in the videos.  To that end, a lot of the Suggested Reading is examples.
-Here it is!  It can also be found on the GitHub site for Unit 4.  
 3.2.3
 
 
