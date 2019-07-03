@@ -1,4 +1,4 @@
-**Suggested Reading For Unit 9 ** 
+**Suggested Reading For Unit 9** 
 
 7.1 Introduction  
 
