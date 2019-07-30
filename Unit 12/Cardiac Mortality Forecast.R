@@ -270,7 +270,6 @@ ASE
 
 ############ VAR MODELS ##########################
 
-
 #VAR Model 1 Forecasts Seasonally Differenced Data 
 
 #Difference all series to make them stationary (assumptoin of VAR)
@@ -332,16 +331,17 @@ CMortVAR = VAR(cbind(CM$cmort, CM$part, CM$temp),season = 52, type = "both",p = 
 preds=predict(CMortVAR,n.ahead=20)
 
 #Plot
-plot(seq(1,508,1), cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
 lines(seq(509,528,1), preds$fcst$y1[,1], type = "l", col = "red")
 
 
 #Find ASE using last 30
 attach(CMsmall)
+CMsmall = CM[1:478,]
 
-VARselect(cbind(CM$cmort, CM$part, CM$temp),lag.max = 10, season = 52, type = "both")
+VARselect(cbind(CMsmall$cmort, CMsmall$part, CMsmall$temp),lag.max = 10, season = 52, type = "both")
 
-CMortVAR = VAR(cbind(CM$cmort, CM$part, CM$temp),season = 52, type = "both",p = 2)
+CMortVAR = VAR(cbind(CMsmall$cmort, CMsmall$part, CMsmall$temp),season = 52, type = "both",p = 2)
 preds=predict(CMortVAR,n.ahead=30)
 
 #Plot
@@ -363,10 +363,10 @@ attach(CMsmall)
 CM$temp_1 = dplyr::lag(CM$temp,1)
 ggpairs(CM[,-7])
 
-VARselect(cbind(CM$cmort, CM$part, CM$temp),lag.max = 10, season = 52, type = "both")
+VARselect(cbind(CM$cmort[2:479], CM$part[2:479], CM$temp_1[2:479]),lag.max = 10, season = 52, type = "both")
 
 #VAR with p = 2
-CMortVAR = VAR(cbind(CM$cmort, CM$part, CM$temp),season = 52, type = "both",p = 2)
+CMortVAR = VAR(cbind(CM$cmort[2:479], CM$part[2:479], CM$temp_1[2:479]),season = 52, type = "both",p = 2)
 preds=predict(CMortVAR,n.ahead=20)
 
 #Plot
@@ -376,10 +376,10 @@ lines(seq(509,528,1), preds$fcst$y1[,1], type = "l", col = "red")
 
 #Find ASE using last 30
 
-CMsmall = CM[1:479]
-VARselect(cbind(CMsmall$cmort, CMsmall$part, CMsmall$temp_1),lag.max = 10, season = 52, type = "both")
+CMsmall = CM[1:479,]
+VARselect(cbind(CMsmall$cmort[2:478], CMsmall$part[2:478], CMsmall$temp_1[2:478]),lag.max = 10, season = 52, type = "both")
 
-CMortVAR = VAR(cbind(CMsmall$cmort, CMsmall$part, CMsmall$temp_1),season = 52, type = "both",p = 2)
+CMortVAR = VAR(cbind(CMsmall$cmort[2:478], CMsmall$part[2:478], CMsmall$temp_1[2:478]),season = 52, type = "both",p = 2)
 preds=predict(CMortVAR,n.ahead=30)
 
 #Plot
