@@ -1,9 +1,13 @@
 # CMort LA Pollution and Temperature Study
 
-# MLR with Cor Errors 
+# ARIMA 1 MLR with Cor Errors (no lag, no seasonl categorical variable)
 
 #EDA
 library(tidyverse)
+library(GGally)
+library(astsa)
+CM = read.csv(file.choose(),header = TRUE)
+
 head(CM)
 ggpairs(CM[2:4]) #matrix of scatter plots
 
@@ -53,51 +57,41 @@ predsCMort = predict(fit,newxreg = next20)
 plot(seq(1,508,1), cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
 lines(seq(509,528,1), predsCMort$pred, type = "l", col = "red")
 
+#Find ASE  Need to forecast last 30 of known series.  
+CMsmall = CM[1:478,]
+ksfit = lm(cmort~temp+part+Week, data = CMsmall)
+phi = aic.wge(ksfit$residuals)
+attach(CMsmall)
+fit = arima(cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(temp, part, Week))
+
+last30 = data.frame(temp = CM$temp[479:508], part = CM$part[479:508], Week = seq(479,508,1))
+#get predictions
+predsCMort = predict(fit,newxreg = last30)
+
+
+ASE = mean((CM$cmort[479:508] - predsCMort$pred)^2)
+ASE
+
+#Find ASE  Need to forecast last 30 of known series.  
+CMsmall = CM[1:478,]
+ksfit = lm(cmort~temp_1+part+Week, data = CMsmall)
+phi = aic.wge(ksfit$residuals)
+attach(CMsmall)
+fit = arima(cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(temp, part, Week))
+
+last30 = data.frame(temp = CM$temp_1[479:508], part = CM$part[479:508], Week = seq(479,508,1))
+#get predictions
+predsCMort = predict(fit,newxreg = last30)
+
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(479,508,1), predsCMort$pred, type = "l", col = "red")
+
+
+ASE = mean((CM$cmort[479:508] - predsCMort$pred)^2)
+ASE
 
 
 
-
-
-#VAR Forecasts Seasonally Differenced Data 
-
-#Difference all series to make them stationary (assumptoin of VAR)
-# Doesn't have to be white... just stationary
-
-CM_52 = artrans.wge(cmort,c(rep(0,51),1))
-Part_52 = artrans.wge(part,c(rep(0,51),1))
-Temp_52 = artrans.wge(temp,c(rep(0,51),1))
-
-#VARSelect on Differenced Data chooses 2
-VARselect(cbind(CM_52, Part_52, Temp_52),lag.max = 10, type = "both")
-
-#VAR with p = 2
-CMortDiffVAR = VAR(cbind(CM_52, Part_52, Temp_52),type = "both",p = 2)
-preds=predict(CMortDiffVAR,n.ahead=20)
-
-#We have predicted differences .... calculate actual cardiac mortalities 
-startingPoint = CM$cmort[508]
-CMortForcasts = preds$fcst$CM_52[,1:3] + startingPoint
-
-#Plot
-dev.off()
-plot(seq(1,508,1), cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
-lines(seq(509,528,1), as.data.frame(CMortForcasts)$fcst, type = "l", col = "red")
-
-
-
-
-#VAR Forecasts Seasonal Dummy
-
-#VARSelect on Seasonal Data chooses 2
-VARselect(cbind(CM$cmort, CM$part, CM$temp),lag.max = 10, season = 52, type = "both")
-
-#VAR with p = 2
-CMortVAR = VAR(cbind(CM$cmort, CM$part, CM$temp),season = 52, type = "both",p = 2)
-preds=predict(CMortVAR,n.ahead=20)
-
-#Plot
-plot(seq(1,508,1), cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
-lines(seq(509,528,1), preds$fcst$y1[,1], type = "l", col = "red")
 
 
 
@@ -168,13 +162,17 @@ lines(seq(509,528,1), predsFinal, type = "l", col = "red")
 
 
 
+
+
+
+
+
 #ARIMA 3: categorical variable
 #With Lagged Time
 library(dplyr)
 
 #Lag Temperature 1 
 CM$temp1 = dplyr::lag(CM$temp,1)
-
 
 #forecast Particles
 plotts.sample.wge(CM$part) #freq near .0192 (annual)
@@ -234,6 +232,178 @@ predsFinal = preds + resids$f
 #plot next 20 cmort wrt time
 plot(seq(1,508,1), cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
 lines(seq(509,528,1), predsFinal, type = "l", col = "red")
+
+
+#Find ASE  Need to forecast last 30 of known series.  
+CMsmall = CM[2:478,]
+ksfit = lm(cmort~temp_1+part+Week+FWeek, data = CMsmall)
+phi = aic.wge(ksfit$residuals)
+attach(CMsmall)
+fit = arima(cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(temp1, part, Week))
+
+last30 = data.frame(temp = CM$temp_1[479:508], part = CM$part[479:508], Week = seq(479,508,1))
+#get predictions
+predsCMort = predict(fit,newxreg = last30)
+
+#predict residuals manually
+plotts.sample.wge(ksfit$residuals)
+phi = aic.wge(ksfit$residuals)
+resids = fore.arma.wge(ksfit$residuals,phi = phi$phi,n.ahead = 30)
+#predict trend manually
+preds = predict(ksfit, newdata = last30)
+
+predsFinal = preds + resids$f
+
+
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(479,508,1), predsFinal, type = "l", col = "red")
+
+
+ASE = mean((CM$cmort[479:508] - predsFinal)^2,na.rm = TRUE)
+ASE
+
+
+
+
+
+
+
+############ VAR MODELS ##########################
+
+
+#VAR Model 1 Forecasts Seasonally Differenced Data 
+
+#Difference all series to make them stationary (assumptoin of VAR)
+# Doesn't have to be white... just stationary
+library(vars)
+
+attach(CM)
+CM_52 = artrans.wge(cmort,c(rep(0,51),1))
+Part_52 = artrans.wge(part,c(rep(0,51),1))
+Temp_52 = artrans.wge(temp,c(rep(0,51),1))
+
+#VARSelect on Differenced Data chooses 2
+VARselect(cbind(CM_52, Part_52, Temp_52),lag.max = 10, type = "both")
+
+#VAR with p = 2
+CMortDiffVAR = VAR(cbind(CM_52, Part_52, Temp_52),type = "both",p = 2)
+preds=predict(CMortDiffVAR,n.ahead=20)
+
+#We have predicted differences .... calculate actual cardiac mortalities 
+startingPoint = CM$cmort[508]
+CMortForcasts = preds$fcst$CM_52[,1:3] + startingPoint
+
+#Plot
+dev.off()
+plot(seq(1,508,1), cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(509,528,1), as.data.frame(CMortForcasts)$fcst, type = "l", col = "red")
+detach(CM)
+
+#Find ASE using last 30
+attach(CMsmall)
+CM_52 = artrans.wge(cmort,c(rep(0,51),1))
+Part_52 = artrans.wge(part,c(rep(0,51),1))
+Temp_52 = artrans.wge(temp,c(rep(0,51),1))
+
+VARselect(cbind(CM_52, Part_52, Temp_52),lag.max = 10, type = "both")
+
+CMortDiffVAR = VAR(cbind(CM_52, Part_52, Temp_52),type = "both",p = 2)
+preds=predict(CMortDiffVAR,n.ahead=30)
+
+startingPoint = CM$cmort[479]
+CMortForcasts = preds$fcst$CM_52[,1:3] + startingPoint
+
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(479,508,1), CMortForcasts[,1], type = "l", col = "red")
+
+ASE = mean((CM$cmort[479:508] - CMortForcasts)^2)
+ASE
+detach(CMsmall)
+
+
+
+#VAR Model 2 Forecasts Seasonal Dummy
+
+#VARSelect on Seasonal Data chooses 2
+VARselect(cbind(CM$cmort, CM$part, CM$temp),lag.max = 10, season = 52, type = "both")
+
+#VAR with p = 2
+CMortVAR = VAR(cbind(CM$cmort, CM$part, CM$temp),season = 52, type = "both",p = 2)
+preds=predict(CMortVAR,n.ahead=20)
+
+#Plot
+plot(seq(1,508,1), cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(509,528,1), preds$fcst$y1[,1], type = "l", col = "red")
+
+
+#Find ASE using last 30
+attach(CMsmall)
+
+VARselect(cbind(CM$cmort, CM$part, CM$temp),lag.max = 10, season = 52, type = "both")
+
+CMortVAR = VAR(cbind(CM$cmort, CM$part, CM$temp),season = 52, type = "both",p = 2)
+preds=predict(CMortVAR,n.ahead=30)
+
+#Plot
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(479,508,1), preds$fcst$y1[,1], type = "l", col = "red")
+
+
+ASE = mean((CM$cmort[479:508] - preds$fcst$y1)^2)
+ASE
+detach(CMsmall)
+
+
+
+
+
+
+#VAR Model 3 seasonal with Lag 1 Temp
+attach(CMsmall)
+CM$temp_1 = dplyr::lag(CM$temp,1)
+ggpairs(CM[,-7])
+
+VARselect(cbind(CM$cmort, CM$part, CM$temp),lag.max = 10, season = 52, type = "both")
+
+#VAR with p = 2
+CMortVAR = VAR(cbind(CM$cmort, CM$part, CM$temp),season = 52, type = "both",p = 2)
+preds=predict(CMortVAR,n.ahead=20)
+
+#Plot
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(509,528,1), preds$fcst$y1[,1], type = "l", col = "red")
+
+
+#Find ASE using last 30
+
+CMsmall = CM[1:479]
+VARselect(cbind(CMsmall$cmort, CMsmall$part, CMsmall$temp_1),lag.max = 10, season = 52, type = "both")
+
+CMortVAR = VAR(cbind(CMsmall$cmort, CMsmall$part, CMsmall$temp_1),season = 52, type = "both",p = 2)
+preds=predict(CMortVAR,n.ahead=30)
+
+#Plot
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(479,508,1), preds$fcst$y1[,1], type = "l", col = "red")
+
+
+ASE = mean((CM$cmort[479:508] - preds$fcst$y1)^2)
+ASE
+detach(CMsmall)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
