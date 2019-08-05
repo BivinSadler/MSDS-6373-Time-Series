@@ -42,8 +42,8 @@ predsTemp = fore.aruma.wge(CM$temp,s = 52, n.ahead = 20)
 #assuming data is loaded in dataframe CM
 ksfit = lm(cmort~temp+part+Week, data = CM)
 phi = aic.wge(ksfit$residuals)
-attach(CM)
-fit = arima(cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(temp, part, Week))
+
+fit = arima(CM$cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(CM$temp, CM$part, CM$Week))
 
 # Check for whiteness of residuals
 acf(fit$residuals)
@@ -79,8 +79,8 @@ CMsmall$temp_1 = dplyr::lag(CMsmall$temp,1)
 CM$temp_1 = dplyr::lag(CM$temp,1)
 ksfit = lm(cmort~temp_1+part+Week, data = CMsmall)
 phi = aic.wge(ksfit$residuals)
-attach(CMsmall)
-fit = arima(cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(temp, part, Week))
+
+fit = arima(CMsmall$cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(CMsmall$temp, CMsmall$part, CMsmall$Week))
 
 last30 = data.frame(temp = CM$temp_1[479:508], part = CM$part[479:508], Week = seq(479,508,1))
 #get predictions
