@@ -108,6 +108,52 @@ lines(seq(96,100,1), preds$pred, type = "l", col = "red")
 
 
 
+####### Forecast Features 
+
+plotts.sample.wge(BSales$ad_tv)
+aic5.wge(BSales$ad_tv)
+est_ad_tv = est.arma.wge(BSales$ad_tv,p = 2, q = 2)
+ad_tvFORECAST = fore.arma.wge(BSales$ad_tv,phi = est_ad_tv$phi, theta = est_ad_tv$theta, n.ahead = 6)
+
+plotts.sample.wge(BSales$ad_online)
+aic5.wge(BSales$ad_online, p = 0:10)
+est_online = est.arma.wge(BSales$ad_online,p = 6)
+dev.off()
+plot.ts(BSales$ad_online[1:100])
+ad_onlineFORECAST = fore.arma.wge(BSales$ad_online,phi = est_online$phi, n.ahead = 6)
+
+
+
+#with trend and lagging
+
+ad_tvFORECAST1 = lag(ad_tvFORECAST,1)
+
+ad_onlineFORECAST1 = lag(ad_onlineFORECAST,1)
+
+# ASE for model with no lag and trend (last 5)
+t=1:100
+BSales$t = t
+BSales2 = BSales[2:95,]
+ksfit=lm(sales~t+ad_tv1+ad_online1, data = BSales2)
+aic.wge(ksfit$residuals,p=0:8,q=0:0)  # AIC picks p=7
+fit = arima(BSales2$sales,order = c(7,0,0), xreg = cbind(BSales2$ad_tv1,BSales2$ad_online1,BSales2$t))
+fit
+
+
+preds = predict(fit, newxreg = cbind(ad_tvFORECAST$f[2:6],ad_onlineFORECAST$f[2:6],BSales$t[96:100]))
+ASE3.5 = mean((BSales$sales[96:100] - preds$pred[1:5])^2)
+ASE3.5
+
+
+plot(seq(1,100,1), BSales$sales[1:100], type = "l",xlim = c(0,100), ylab = "Business Sales", main = "5 Week Sales Forecast")
+lines(seq(96,100,1), preds$pred[2:6], type = "l", col = "red")
+
+
+
+
+
+
+
 
 ############ VAR MODELS ##########################
 
