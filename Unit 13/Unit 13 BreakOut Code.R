@@ -185,8 +185,8 @@ ASE
 
 ##### MLP MODEL FOR CARDIAC MORTALITY DATA
 CMsmall = CMsmall[2:456,]
-CMsmallDF = data.frame(Week = ts(CMsmall$Week),temp = ts(CMsmall$temp), part = ts(CMsmall$part), temp_1 = ts(CMsmall$temp_1))
-fit.mlp2 = mlp(ts(CMsmall$cmort),reps = 50,comb = "mean",xreg = CMsmallDF)
+CMsmallDF = data.frame(Week = ts(CMsmall$Week,frequency = 52),temp = ts(CMsmall$temp,frequency = 52), part = ts(CMsmall$part,frequency = 52), temp_1 = ts(CMsmall$temp_1,frequency = 52))
+fit.mlp2 = mlp(ts(CMsmall$cmort),reps = 50, comb = "median",xreg = CMsmallDF)
 fit.mlp2
 plot(fit.mlp2)
 CMDF = data.frame(Week = ts(CM$Week),temp = ts(CM$temp), part = ts(CM$part), temp_1 = ts(CM$temp_1))
@@ -214,6 +214,16 @@ ASE
 
 
 
+#ts() experiment
+
+a = gen.aruma.wge(1000,s = 12, phi = .9, sn = 1)
+
+fit1 = mlp(ts(a),reps = 50,comb = "mean")
+fit1
+fit2 = mlp(ts(a,frequency = 12),reps = 50,comb = "mean")
+fit2
+fit3 = mlp(ts(a,frequency),m = 12,reps = 50,comb = "mean")
+fit3
 
 
 ###  Link to Ensemble Study on tourist data
