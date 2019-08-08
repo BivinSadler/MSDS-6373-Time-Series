@@ -69,10 +69,10 @@ ggpairs(CM[2:4]) #matrix of scatter plots
 CM$temp_1 = dplyr::lag(CM$temp,1)
 ggpairs(CM)
 
-VARselect(cbind(CM$cmort[2:508], CM$part[2:508], CM$temp_1[2:508]),lag.max = 10, season = 52, type = "both")
+VARselect(cbind(CM$cmort[2:508], CM$part[2:508], CM$temp[2:508]),lag.max = 10, season = 52, type = "both")
 
 #VAR with p = 2
-CMortVAR = VAR(cbind(CM$cmort[2:508], CM$part[2:508], CM$temp_1[2:508]),season = 52, type = "both",p = 2)
+CMortVAR = VAR(cbind(CM$cmort[2:508], CM$part[2:508], CM$temp[2:508]),season = 52, type = "both",p = 2)
 preds=predict(CMortVAR,n.ahead=30)
 
 #Plot
@@ -84,13 +84,20 @@ lines(seq(509,538,1), preds$fcst$y1[,1], type = "l", col = "red")
 CMsmall = CM[1:478,]
 
 #Start and 2 since the lagged variable is NA at first index
-VARselect(cbind(CMsmall$cmort[2:478], CMsmall$part[2:478], CMsmall$temp_1[2:478]),lag.max = 10, season = 52, type = "both")
+VARselect(cbind(CMsmall$cmort[1:478], CMsmall$part[1:478], CMsmall$temp[1:478]),lag.max = 10, season = 52, type = "both")
 
-CMortVAR = VAR(cbind(CMsmall$cmort[2:478], CMsmall$part[2:478], CMsmall$temp_1[2:478]),season = 52, type = "both",p = 2)
+CMortVAR = VAR(cbind(CMsmall$cmort[1:478], CMsmall$part[1:478], CMsmall$temp[1:478]),season = 52, type = "both",p = 2)
 preds=predict(CMortVAR,n.ahead=30)
 
+
+dev.off()
+par(mfrow = c(2,1))
 #Plot
 plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(479,508,1), preds$fcst$y1[,1], type = "l", col = "red")
+
+#Plot
+plot(seq(479,508,1), CM$cmort[479:508], type = "l",xlim = c(479,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
 lines(seq(479,508,1), preds$fcst$y1[,1], type = "l", col = "red")
 
 
@@ -101,19 +108,26 @@ ASE
 
 
 ##### MLP MODEL FOR CARDIAC MORTALITY DATA
-CMsmall = CMsmall[2:478,]
-CMsmallDF = data.frame(Week = ts(CMsmall$Week),temp = ts(CMsmall$temp), part = ts(CMsmall$part), temp_1 = ts(CMsmall$temp_1))
+CMsmall = CMsmall[1:478,]
+CMsmallDF = data.frame(Week = ts(CMsmall$Week),temp = ts(CMsmall$temp), part = ts(CMsmall$part), temp = ts(CMsmall$temp))
 fit.mlp1 = mlp(ts(CMsmall$cmort),reps = 50,comb = "mean",xreg = CMsmallDF)
 fit.mlp1
 plot(fit.mlp1)
-CMDF = data.frame(Week = ts(CM$Week),temp = ts(CM$temp), part = ts(CM$part), temp_1 = ts(CM$temp_1))
+CMDF = data.frame(Week = ts(CM$Week),temp = ts(CM$temp), part = ts(CM$part), temp = ts(CM$temp))
 fore.mlp1 = forecast(fit.mlp1, h = 30, xreg = CMDF)
 plot(fore.mlp1)
 ASE = mean((CM$cmort[479:508] - fore.mlp1$mean)^2)
 ASE
 
+dev.off()
+par(mfrow = c(2,1))
+
 #Plot
 plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(479,508,1), fore.mlp1$mean, type = "l", col = "blue")
+
+#Plot
+plot(seq(479,508,1), CM$cmort[479:508], type = "l",xlim = c(479,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
 lines(seq(479,508,1), fore.mlp1$mean, type = "l", col = "blue")
 
 
@@ -122,9 +136,17 @@ lines(seq(479,508,1), fore.mlp1$mean, type = "l", col = "blue")
 
 ensemble  = (preds$fcst$y1[,1] + fore.mlp1$mean)/2
 
+dev.off()
+par(mfrow = c(2,1))
+
 #Plot
 plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
 lines(seq(479,508,1), ensemble, type = "l", col = "green")
+
+#Plot
+plot(seq(479,508,1), CM$cmort[479:508], type = "l",xlim = c(479,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(479,508,1), ensemble, type = "l", col = "green")
+
 
 ASE = mean((CM$cmort[479:508] - ensemble)^2)
 ASE
