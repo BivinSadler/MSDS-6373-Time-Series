@@ -195,8 +195,15 @@ plot(fore.mlp2)
 ASE = mean((CM$cmort[457:508] - fore.mlp2$mean)^2)
 ASE
 
+dev.off()
+
+par(mfrow = c(2,1))
 #Plot
-plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,510), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,510), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast", xlab = "Time")
+lines(seq(457,508,1), fore.mlp2$mean, type = "l", col = "blue")
+
+#Plot
+plot(seq(457,508,1), CM$cmort[457:508], type = "l",xlim = c(457,510), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast", xlab = "Time")
 lines(seq(457,508,1), fore.mlp2$mean, type = "l", col = "blue")
 
 
@@ -208,6 +215,21 @@ ensemble  = (preds$fcst$y1[,1] + fore.mlp2$mean)/2
 #Plot
 plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
 lines(seq(457,508,1), ensemble, type = "l", col = "green")
+
+
+dev.off()
+
+par(mfrow = c(2,1))
+#Plot
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,510), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast", xlab = "Time")
+lines(seq(457,508,1), ensemble, type = "l", col = "green")
+
+#Plot
+plot(seq(457,508,1), CM$cmort[457:508], type = "l",xlim = c(457,510), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast", xlab = "Time")
+lines(seq(457,508,1), ensemble, type = "l", col = "green")
+
+
+
 
 ASE = mean((CM$cmort[457:508] - ensemble)^2)
 ASE
