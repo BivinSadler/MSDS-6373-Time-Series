@@ -6,6 +6,7 @@
 library(tidyverse)
 library(GGally)
 library(astsa)
+library(tswge)
 CM = read.csv(file.choose(),header = TRUE)
 
 head(CM)
@@ -41,8 +42,8 @@ predsTemp = fore.aruma.wge(CM$temp,s = 52, n.ahead = 20)
 #assuming data is loaded in dataframe CM
 ksfit = lm(cmort~temp+part+Week, data = CM)
 phi = aic.wge(ksfit$residuals)
-attach(CM)
-fit = arima(cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(temp, part, Week))
+
+fit = arima(CM$cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(CM$temp, CM$part, CM$Week))
 
 # Check for whiteness of residuals
 acf(fit$residuals)
@@ -74,10 +75,12 @@ ASE
 
 #Find ASE  Need to forecast last 30 of known series.  
 CMsmall = CM[1:478,]
+CMsmall$temp_1 = dplyr::lag(CMsmall$temp,1)
+CM$temp_1 = dplyr::lag(CM$temp,1)
 ksfit = lm(cmort~temp_1+part+Week, data = CMsmall)
 phi = aic.wge(ksfit$residuals)
-attach(CMsmall)
-fit = arima(cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(temp, part, Week))
+
+fit = arima(CMsmall$cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(CMsmall$temp, CMsmall$part, CMsmall$Week))
 
 last30 = data.frame(temp = CM$temp_1[479:508], part = CM$part[479:508], Week = seq(479,508,1))
 #get predictions
@@ -130,8 +133,7 @@ predsTemp = fore.aruma.wge(CM$temp,s = 52, n.ahead = 20)
 CM$FWeek = as.factor(CM$Week%%52)
 ksfit = lm(cmort~temp+part+Week+FWeek, data = CM)
 phi = aic.wge(ksfit$residuals)
-attach(CM)
-fit = arima(cmort,order = c(phi$p,0,0), xreg = cbind(temp, part, Week, FWeek))
+fit = arima(cmort,order = c(phi$p,0,0), xreg = cbind(CM$temp, CM$part, CM$Week, CM$FWeek))
 
 # Check for whiteness of residuals
 acf(fit$residuals)
@@ -157,6 +159,32 @@ plot(seq(1,508,1), cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality"
 lines(seq(509,528,1), predsFinal, type = "l", col = "red")
 
 
+#Find ASE  Need to forecast last 30 of known series.  
+CMsmall = CM[2:478,]
+ksfit = lm(cmort~temp+part+Week+FWeek, data = CMsmall)
+phi = aic.wge(ksfit$residuals)
+fit = arima(CMsmall$cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(CMsmall$temp1, CMsmall$part, CMsmall$Week, CMsmall$FWeek))
+
+last30 = data.frame(temp = CM$temp[479:508], part = CM$part[479:508], Week = seq(479,508,1), FWeek = as.factor(seq(479,508,1)%%52))
+#get predictions
+predsCMort = predict(fit,newxreg = last30)
+
+#predict residuals manually
+plotts.sample.wge(ksfit$residuals)
+phi = aic.wge(ksfit$residuals)
+resids = fore.arma.wge(ksfit$residuals,phi = phi$phi,n.ahead = 30)
+#predict trend manually
+preds = predict(ksfit, newdata = last30)
+
+predsFinal = preds + resids$f
+
+
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(479,508,1), predsFinal, type = "l", col = "red")
+
+
+ASE = mean((CM$cmort[479:508] - predsFinal)^2,na.rm = TRUE)
+ASE
 
 
 
@@ -205,8 +233,7 @@ predsTemp = fore.aruma.wge(CM$temp,s = 52, n.ahead = 20)
 CM$FWeek = as.factor(CM$Week%%52)
 ksfit = lm(cmort~temp1+part+Week+FWeek, data = CM)
 phi = aic.wge(ksfit$residuals)
-attach(CM)
-fit = arima(cmort,order = c(phi$p,0,0), xreg = cbind(temp1, part, Week, FWeek))
+fit = arima(cmort,order = c(phi$p,0,0), xreg = cbind(CM$temp1, CM$part, CM$Week, CM$FWeek))
 
 # Check for whiteness of residuals
 acf(fit$residuals)
@@ -236,14 +263,13 @@ lines(seq(509,528,1), predsFinal, type = "l", col = "red")
 
 #Find ASE  Need to forecast last 30 of known series.  
 CMsmall = CM[2:478,]
-ksfit = lm(cmort~temp_1+part+Week+FWeek, data = CMsmall)
+ksfit = lm(cmort~temp1+part+Week+FWeek, data = CMsmall)
 phi = aic.wge(ksfit$residuals)
-attach(CMsmall)
-fit = arima(cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(temp1, part, Week))
+fit = arima(CMsmall$cmort,order = c(phi$p,0,0), seasonal = list(order = c(1,0,0), period = 52), xreg = cbind(CMsmall$temp1, CMsmall$part, CMsmall$Week, CMsmall$FWeek))
 
-last30 = data.frame(temp = CM$temp_1[479:508], part = CM$part[479:508], Week = seq(479,508,1))
+last30 = data.frame(temp1 = CM$temp1[479:508], part = CM$part[479:508], Week = seq(479,508,1), FWeek = as.factor(seq(479,508,1)%%52))
 #get predictions
-predsCMort = predict(fit,newxreg = last30)
+predsCMort = predict(fit,newxreg = last30)  #Showing Error ... why we have to predict resids manually (next step)
 
 #predict residuals manually
 plotts.sample.wge(ksfit$residuals)
@@ -276,10 +302,11 @@ ASE
 # Doesn't have to be white... just stationary
 library(vars)
 
-attach(CM)
-CM_52 = artrans.wge(cmort,c(rep(0,51),1))
-Part_52 = artrans.wge(part,c(rep(0,51),1))
-Temp_52 = artrans.wge(temp,c(rep(0,51),1))
+CM = read.csv(file.choose(),header = TRUE)
+
+CM_52 = artrans.wge(CM$cmort,c(rep(0,51),1))
+Part_52 = artrans.wge(CM$part,c(rep(0,51),1))
+Temp_52 = artrans.wge(CM$temp,c(rep(0,51),1))
 
 #VARSelect on Differenced Data chooses 2
 VARselect(cbind(CM_52, Part_52, Temp_52),lag.max = 10, type = "both")
@@ -289,39 +316,79 @@ CMortDiffVAR = VAR(cbind(CM_52, Part_52, Temp_52),type = "both",p = 2)
 preds=predict(CMortDiffVAR,n.ahead=20)
 
 #We have predicted differences .... calculate actual cardiac mortalities 
-startingPoint = CM$cmort[508]
-CMortForcasts = preds$fcst$CM_52[,1:3] + startingPoint
+startingPoints = CM$cmort[456:475]
+CMortForcasts = preds$fcst$CM_52[,1:3] + startingPoints
 
 #Plot
 dev.off()
-plot(seq(1,508,1), cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,528), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
 lines(seq(509,528,1), as.data.frame(CMortForcasts)$fcst, type = "l", col = "red")
-detach(CM)
+
 
 #Find ASE using last 30
-attach(CMsmall)
-CM_52 = artrans.wge(cmort,c(rep(0,51),1))
-Part_52 = artrans.wge(part,c(rep(0,51),1))
-Temp_52 = artrans.wge(temp,c(rep(0,51),1))
+
+CM_52 = artrans.wge(CMsmall$cmort,c(rep(0,51),1))
+Part_52 = artrans.wge(CMsmall$part,c(rep(0,51),1))
+Temp_52 = artrans.wge(CMsmall$temp,c(rep(0,51),1))
 
 VARselect(cbind(CM_52, Part_52, Temp_52),lag.max = 10, type = "both")
 
 CMortDiffVAR = VAR(cbind(CM_52, Part_52, Temp_52),type = "both",p = 2)
 preds=predict(CMortDiffVAR,n.ahead=30)
 
-startingPoint = CM$cmort[479]
-CMortForcasts = preds$fcst$CM_52[,1:3] + startingPoint
+startingPoints = CM$cmort[428:457]
+CMortForcasts = preds$fcst$CM_52[,1:3] + startingPoints
 
+dev.off()
 plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
 lines(seq(479,508,1), CMortForcasts[,1], type = "l", col = "red")
 
-ASE = mean((CM$cmort[479:508] - CMortForcasts)^2)
+ASE = mean((CM$cmort[479:508] - CMortForcasts[,1])^2)
 ASE
-detach(CMsmall)
+
+
+
+
+#Find ASE using last 52
+
+CMsmall = CM[1:456,]  # 456 = 508-52
+
+CM_52 = artrans.wge(CMsmall$cmort,c(rep(0,51),1))
+Part_52 = artrans.wge(CMsmall$part,c(rep(0,51),1))
+Temp_52 = artrans.wge(CMsmall$temp,c(rep(0,51),1))
+
+VARselect(cbind(CM_52, Part_52, Temp_52),lag.max = 10, type = "both")
+
+CMortDiffVAR = VAR(cbind(CM_52, Part_52, Temp_52),type = "both",p = 2)
+preds=predict(CMortDiffVAR,n.ahead=52)
+
+startingPoints = CM$cmort[405:456]
+CMortForcasts = preds$fcst$CM_52[,1:3] + startingPoints
+
+dev.off()
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(457,508,1), CMortForcasts[,1], type = "l", col = "red")
+
+ASE = mean((CM$cmort[457:508] - CMortForcasts[,1])^2)
+ASE
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 #VAR Model 2 Forecasts Seasonal Dummy
+
+CM = read.csv(file.choose(),header = TRUE)
 
 #VARSelect on Seasonal Data chooses 2
 VARselect(cbind(CM$cmort, CM$part, CM$temp),lag.max = 10, season = 52, type = "both")
@@ -336,7 +403,7 @@ lines(seq(509,528,1), preds$fcst$y1[,1], type = "l", col = "red")
 
 
 #Find ASE using last 30
-attach(CMsmall)
+
 CMsmall = CM[1:478,]
 
 VARselect(cbind(CMsmall$cmort, CMsmall$part, CMsmall$temp),lag.max = 10, season = 52, type = "both")
@@ -349,9 +416,31 @@ plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortali
 lines(seq(479,508,1), preds$fcst$y1[,1], type = "l", col = "red")
 
 
-ASE = mean((CM$cmort[479:508] - preds$fcst$y1)^2)
+ASE = mean((CM$cmort[479:508] - preds$fcst$y1[,1])^2)
 ASE
-detach(CMsmall)
+
+
+
+#Find ASE using last 52
+
+CMsmall = CM[1:456,]  # 456 = 508-52
+VARselect(cbind(CMsmall$cmort[2:456], CMsmall$part[2:456], CMsmall$temp[2:456]),lag.max = 10, season = 52, type = "both")
+
+CMortVAR = VAR(cbind(CMsmall$cmort[2:456], CMsmall$part[2:456], CMsmall$temp[2:456]),season = 52, type = "both",p = 2)
+preds=predict(CMortVAR,n.ahead=52)
+
+#Plot
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(457,508,1), preds$fcst$y1[,1], type = "l", col = "red")
+
+
+ASE = mean((CM$cmort[457:508] - preds$fcst$y1[,1])^2)
+ASE
+
+
+
+
+
 
 
 
@@ -359,7 +448,9 @@ detach(CMsmall)
 
 
 #VAR Model 3 seasonal with Lag 1 Temp
-attach(CMsmall)
+
+CM = read.csv(file.choose(),header = TRUE)
+
 CM$temp_1 = dplyr::lag(CM$temp,1)
 ggpairs(CM[,-7])
 
@@ -387,10 +478,26 @@ plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortali
 lines(seq(479,508,1), preds$fcst$y1[,1], type = "l", col = "red")
 
 
-ASE = mean((CM$cmort[479:508] - preds$fcst$y1)^2)
+ASE = mean((CM$cmort[479:508] - preds$fcst$y1[,1])^2)
 ASE
-detach(CMsmall)
 
+
+
+#Find ASE using last 52
+
+CMsmall = CM[1:456,]  # 456 = 508-52
+VARselect(cbind(CMsmall$cmort[2:456], CMsmall$part[2:456], CMsmall$temp_1[2:456]),lag.max = 10, season = 52, type = "both")
+
+CMortVAR = VAR(cbind(CMsmall$cmort[2:456], CMsmall$part[2:456], CMsmall$temp_1[2:456]),season = 52, type = "both",p = 2)
+preds=predict(CMortVAR,n.ahead=52)
+
+#Plot
+plot(seq(1,508,1), CM$cmort, type = "l",xlim = c(0,508), ylab = "Cardiac Mortality", main = "20 Week Cardiac Mortality Forecast")
+lines(seq(457,508,1), preds$fcst$y1[,1], type = "l", col = "red")
+
+
+ASE = mean((CM$cmort[457:508] - preds$fcst$y1[,1])^2)
+ASE
 
 
 
