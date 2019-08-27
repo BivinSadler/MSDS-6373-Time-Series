@@ -1,4 +1,4 @@
-**Suggested Reading for Unit 5**
+**Required Reading for Unit 5**
 
 Chapter 3:
 
