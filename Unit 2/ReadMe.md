@@ -1,1 +1,3 @@
-This the the ReadMe file for Unit 2!
+**Required Readings for Unit 2:**  
+
+1.6 and 1.7!
