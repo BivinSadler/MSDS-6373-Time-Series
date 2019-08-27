@@ -1,6 +1,6 @@
 This is the ReadMe for Unit 4!
 
-# **Suggested** Reading
+# **Required** Reading
 
 3.2.3
 
