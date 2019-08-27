@@ -1,7 +1,7 @@
 # MSDS-6373-Time-Series
 Here is the one stop shop for ppts, docs and other materials related to the course!
 
-The readings for each unit will be on the ReadMe Page for each Unit's folder.   
+The readings for each Unit will be on the ReadMe Page for each Unit's folder.   
 
 There is a quite a bit of mathematical detail in these chapters that will be good for students to be exposed to.  However, mathematically, students are only responsible (as far as testing is concerned) for the details that are also covered in the videos or that we specifically cover in Live Session.
 
