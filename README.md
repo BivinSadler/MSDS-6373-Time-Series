@@ -7,6 +7,8 @@ There is a quite a bit of mathematical detail in these chapters that will be goo
 
 You will also find the HW and the HW solutions for the Unit in the folder.  It is assumed that everyone has completed and understands the solution to each of these problems.  The midterm will be compiled largely of problems similar to these.  If you have questions, post them on the Wall and/or on your Powerpoint deck for live session.  You may occasionally find a mistake in the solutions, I am compilling an errata as we go, please let me know if you think you have found a dicrepancy.  
 
+OFFICE HOURS: MONDAY 8pm CENTRAL  
+
 Have a blast! Remember this is Karate Kid Style!!!
 
 
