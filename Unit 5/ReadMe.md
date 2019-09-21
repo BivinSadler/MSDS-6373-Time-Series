@@ -26,3 +26,7 @@ Example 3.20
 
 Example 3.21 (Including the "Using R")
 
+
+# Unit 5 Erata in Concept Check and HW
+
+5.2-4  Answer should be 0.5 (rather than -0.5)
