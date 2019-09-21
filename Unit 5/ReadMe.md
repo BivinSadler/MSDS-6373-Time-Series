@@ -29,4 +29,6 @@ Example 3.21 (Including the "Using R")
 
 # Unit 5 Erata in Concept Check and HW
 
-5.2-4  Answer should be 0.5 (rather than -0.5)
+5.2 Card 4  Answer should be 0.5 (rather than -0.5)
+
+5.3 Card 6  Answer should be the specral density with a peak at 2.5 (letters may very).  
