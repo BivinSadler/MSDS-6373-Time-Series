@@ -34,3 +34,5 @@ Example 3.21 (Including the "Using R")
 5.2 Card 7  Answer should be -.4612 and not -.4611.
 
 5.3 Card 6  Answer should be the specral density with a peak at 2.5 (letters may very).  
+
+5.5 Card 5  Equation is irreducible.  Nothing will cancel.  
