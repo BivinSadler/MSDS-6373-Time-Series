@@ -12,3 +12,5 @@ Chapter 5:
 
 1. 6.4 card 4: none of the answer choices match the output from R.  The answer is ARMA(4,2).
 2. There is a 'B' missing in the model specification in the MA part of 6.6 Card 2 and 3
+3. In 6.6 Card 2: The there is a B missing, please do not take the second difference (mistake on my part) and  
+then choose the most favored by the aic from the choices that are given. 
