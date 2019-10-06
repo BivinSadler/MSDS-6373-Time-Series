@@ -1,5 +1,22 @@
-Suggested Reading for Unit 7
+Required Reading for Unit 7
 
+Introduction: Page 229
+
+6.2 All  
+
+6.3 All  
+
+B.5 All  
+
+6.6 All  
+
+6.7 All special attention to page 246 (6.31)  
+
+6.8 All (pay close attention to "Usng R" and the Examples)  
+
+6.9 Example 6.6, Example 6.7, Example 6.8
+
+6.10 All
 
 
 # Erata:
