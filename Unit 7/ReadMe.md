@@ -6,7 +6,7 @@ Introduction: Page 229
 
 6.3 All  
 
-B.5 All  
+6.5 All  
 
 6.6 All  
 
