@@ -13,9 +13,10 @@ The next two sections are fairly mathematical.  It is not necessary to fully gra
 7.6  Close attention here.   
 
 ### Identification  
-8.1
-8.2
-8.2.1
+
+8.1  
+8.2  
+8.2.1  
 
 
 ## Errata
