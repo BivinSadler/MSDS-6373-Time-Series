@@ -1,4 +1,8 @@
-**Required Reading For Unit 9** 
+# Parameter Estimation and Model ID for Stationary Data
+
+## Required Reading For Unit 9** 
+
+### Estimation  
 
 7.1 Introduction  
 
@@ -7,6 +11,11 @@ The next two sections are fairly mathematical.  It is not necessary to fully gra
 7.2.1.3 up to Equation (7.18)  
 
 7.6  Close attention here.   
+
+### Identification  
+8.1
+8.2
+8.2.1
 
 
 ## Errata
