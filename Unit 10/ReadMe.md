@@ -1,6 +1,13 @@
-# Non Stationary Model ID!
+# Model Identification for Nonstationary Models!!  
 
-# Suggested Reading
+## Suggested Reading:  
+
+8.3
+8.3.1
+8.3.2
+8.3.3
+8.3.4
+8.3.5 (8.3.5.1, 8.3.5.1, 8.3.5.3 ... Examples!)
 
 
 ## Erata:
