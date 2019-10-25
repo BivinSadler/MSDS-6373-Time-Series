@@ -1,6 +1,6 @@
 # Parameter Estimation and Model ID for Stationary Data
 
-## Required Reading For Unit 9** 
+## Required Reading For Unit 9
 
 ### Estimation  
 
