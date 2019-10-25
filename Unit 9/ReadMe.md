@@ -2,7 +2,7 @@
 
 ## Required Reading For Unit 9
 
-### Estimation  
+### Estimation:
 
 7.1 Introduction  
 
@@ -12,7 +12,7 @@ The next two sections are fairly mathematical.  It is not necessary to fully gra
 
 7.6  Close attention here.   
 
-### Identification  
+### Identification:
 
 8.1  
 8.2  
