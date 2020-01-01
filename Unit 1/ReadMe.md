@@ -1,4 +1,4 @@
-**Suggested Reading for Unit 1**  
+**Required Reading for Unit 1**  
 
 The required reading for Unit 1 is: 
 
