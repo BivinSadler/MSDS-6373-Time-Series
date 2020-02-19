@@ -51,7 +51,7 @@ WindowedASE
 
 # Visualization
 
-i = 78
+i = 45
 fs = fore.aruma.wge(amtrak$Ridership[i:(i+(trainingSize+horizon)-1)],phi = phis, theta = thetas, s = s, d = d,n.ahead = 12, lastn = TRUE)
 ASE = mean((amtrak$Ridership[(i+trainingSize):(i+(trainingSize+horizon)-1)] - fs$f )^2)
 ASE
