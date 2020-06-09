@@ -19,4 +19,4 @@ then choose the most favored by the aic from the choices that are given.
 
 6. 6.6 Card 7 ... just get as close as you can to factors that match a particular s.   Also .. change the answer choices to be s = 4 rather than "Quarterly Seasonal Model."
 7. 6.6 Card 3: "What do we know about the true stationary correlation structure of the model with the (1-B^12) removed?"  Take out the part about generating a realization.  
-
+8. 6.5 Card 2: Assume a graduate program has 3 semesters a year and thus each semeester is 4 months long.  Assume that the number of emails a professor recieves is farily constant for most of the semester but tend to peak around the time of finals. If the number of emails the professor receives is recorded monthly, "Which model would be most appropriate for modeling the number of emails received each month?" Answer: s = 4
