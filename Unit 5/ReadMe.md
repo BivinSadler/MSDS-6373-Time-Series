@@ -29,6 +29,8 @@ Example 3.21 (Including the "Using R")
 
 # Unit 5 Erata in Concept Check and HW
 
+## Videos  
+
 5.2 Card 4  Answer should be 0.5 (rather than -0.5)
 
 5.2 Card 7  Answer should be -.4612 and not -.4611.
@@ -36,3 +38,8 @@ Example 3.21 (Including the "Using R")
 5.3 Card 6  Answer should be the specral density with a peak at 2.5 (letters may very).  
 
 5.5 Card 5  Equation is irreducible.  Nothing will cancel.  
+
+## HW  
+
+3.7d The positive real root for the MA(1) part of the model is associated with a dip in the spectral density at f = 0 (rather than f = .5)
+
