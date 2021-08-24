@@ -1,6 +1,6 @@
 # Model Identification for Nonstationary Models!!  
 
-## Suggested Reading:  
+## Required Reading:  
 
 8.3  
 8.3.1  
