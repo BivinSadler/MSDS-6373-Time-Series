@@ -1,3 +1,29 @@
+
+# 2022 and Beyond Course
+
+## Required Reading
+
+### Woodward, Sadler and Roberston Book
+
+5.1.2 The AR(2) Model
+
+5.1.3 The AR(p) Model
+
+
+
+
+
+
+
+
+
+
+
+
+
+# PRE 2022 COURSE ... 2018 - 2021
+**Required Reading for Unit 3**
+
 This is the ReadMe for Unit 4!
 
 # **Required** Reading
