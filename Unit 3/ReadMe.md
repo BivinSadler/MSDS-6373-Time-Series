@@ -1,6 +1,8 @@
 # 2022 and Beyond Course
 
-## Woodward Sadler and Roberston Book
+## Required Reading
+
+### Woodward Sadler and Roberston Book
 
 4.3.1 Types of Filters
 
