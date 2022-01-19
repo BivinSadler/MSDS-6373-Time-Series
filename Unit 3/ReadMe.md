@@ -2,9 +2,13 @@
 
 ## Woodward Sadler and Roberston Book
 
-5.1.2 The AR(2) Model
+4.3.1 Types of Filters
 
-5.1.3 The AR(p) Model
+4.3.2 The Butterworth Filter
+
+4.4 Concluding Remarks
+
+5.1.1 The AR(1) Model
 
 
 
