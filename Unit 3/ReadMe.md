@@ -2,7 +2,7 @@
 
 ## Required Reading
 
-### Woodward, Sadler and Roberston Book
+### Woodward, Sadler and Robertson Book
 
 4.3.1 Types of Filters
 
