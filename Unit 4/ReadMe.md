@@ -3,7 +3,7 @@
 
 ## Required Reading
 
-### Woodward, Sadler and Roberston Book
+### Woodward, Sadler and Robertson Book
 
 5.1.2 The AR(2) Model
 
