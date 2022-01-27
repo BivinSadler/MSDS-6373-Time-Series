@@ -9,9 +9,9 @@
 
 5.2 Autoregressive-Moving Average(ARMA) Models
 
-  5.2.1 Moving Average Models
+	  5.2.1 Moving Average Models
 
-  5.2.2  ARMA(p,q) Models
+  	5.2.2  ARMA(p,q) Models
 
 
 
