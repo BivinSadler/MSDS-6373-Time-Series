@@ -1,3 +1,24 @@
+# 2022 and Beyond Course
+
+## Required Reading
+
+### Woodward, Sadler and Robertson Book
+
+
+5.1.4 Linear Filters, the General Linear process, and AR(p) Models
+
+5.2 Autoregressive-Moving Average(ARMA) Models
+
+  5.2.1 Moving Average Models
+
+  5.2.2  ARMA(p,q) Models
+
+
+
+
+
+
+# PRE 2022 COURSE ... 2018 - 2021
 **Required Reading for Unit 5**
 
 Chapter 3:
