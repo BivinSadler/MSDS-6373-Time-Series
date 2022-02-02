@@ -1,5 +1,5 @@
 
-**Required Reading From New Book  
+**Required Reading From New Book** 
 
 7.	ARIMA, Seasonal, and ARCH/GARCH Models
 7.1 ARIMA(p,d,q) Models
