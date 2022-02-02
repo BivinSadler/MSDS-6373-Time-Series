@@ -1,7 +1,7 @@
 
-**Required Reading From New Book** 
+#Required Reading From New Book# 
 
-* 7. ARIMA, Seasonal, and ARCH/GARCH Models  
+ ##7 ARIMA, Seasonal, and ARCH/GARCH Models###
 * 7.1 ARIMA(p,d,q) Models  
       * 7.1.1 Properties of ARIMA(p,d,q) Models  
       * 7.1.2 Model Identification and Parameter Estimation of ARIMA(p,d,q) Models   
