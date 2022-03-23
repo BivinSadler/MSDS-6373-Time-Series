@@ -1,3 +1,6 @@
 
-## Erata
-12.5.5 Use type = "none" and p = 2... also 393.031 should be the answer... but it is recorded in the system as 393.31.  
+Hint on 12.5.5:  
+
+BSVar1 = VAR(cbind(BSales$sales,BSales$ad_tv,BSales$ad_online,BSales$discount), type = "const", lag.max = 2)
+AIC(BSVar1)
+
