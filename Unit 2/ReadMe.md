@@ -1,9 +1,24 @@
-**Required Readings for Unit 2:**  
+## Required Reading
+
+### Woodward, Sadler and Robertson Book
 
 1.6 and 1.7!
 
-# Erata
 
+## Optional Reading
+
+### Woodward, Gray, Elliot
+Optional: 
+OB: -2.1 (up to Thm 2.1)
+-2.2 (up to Thm 2.3
+-2.4 (up to 2.4.1)
+-3.1 up through Equation (3.4)
+-3.1.1
+-3.1.2
+-3.2 (up to 3.2.3)
+
+
+## Erata 
 ## Homework Solution for unit 2
 
 "dbplot = False" was an ption from a previous version of parzen.wge().  You can ignore / delete that option in the code. 
