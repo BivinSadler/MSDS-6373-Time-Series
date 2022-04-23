@@ -1,5 +1,3 @@
-# 2022 and Beyond Course
-
 ## Required Reading
 
 ### Woodward, Sadler and Robertson Book
@@ -14,13 +12,9 @@
 
 
 
+**Optional Reading Reading for Unit 3**
 
-
-
-
-
-# PRE 2022 COURSE ... 2018 - 2021
-**Required Reading for Unit 3**
+### Woodward, Gray, Elliot
 
 2.1 (up to Thm 2.1)
 
