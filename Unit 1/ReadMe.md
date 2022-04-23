@@ -1,14 +1,17 @@
+
 **Required Reading for Unit 1**  
 
-The required reading for Unit 1 is: 
+## Woodward, Sadler, Robertson
 
-Required:
 Chapter 3 pdf
 
-Optional:
+## Optional Reading for Unit 1
+
+New Book
 Chapter 1 pdf
 
-
+Old Book
+1.1-1.5
 
 
 # Erata
