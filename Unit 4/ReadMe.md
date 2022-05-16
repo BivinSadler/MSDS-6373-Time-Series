@@ -22,7 +22,7 @@
 
 
 ## Very Useful Supplemental Reading  
-### This is the reading from the former text book
+### This is the reading from the former text book (Woodward Gray Elliot)
 
 
 3.2.3
