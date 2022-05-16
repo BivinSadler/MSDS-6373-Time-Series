@@ -21,12 +21,9 @@
 
 
 
-# PRE 2022 COURSE ... 2018 - 2021
-**Required Reading for Unit 3**
+# Very Useful Supplemental Reading  
+## This is the reading from the former text book
 
-This is the ReadMe for Unit 4!
-
-# **Required** Reading
 
 3.2.3
 
@@ -72,6 +69,3 @@ Example 3.14
 
 Example 3.15
 
-
-
-See you Tuesday!
