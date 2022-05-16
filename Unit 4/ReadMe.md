@@ -21,8 +21,8 @@
 
 
 
-# Very Useful Supplemental Reading  
-## This is the reading from the former text book
+## Very Useful Supplemental Reading  
+### This is the reading from the former text book
 
 
 3.2.3
