@@ -1,5 +1,6 @@
 # Welcome to MSDS-6373-Time-Series!  
-Here is the one stop shop for ppts, docs and other materials related to the course!
+
+## Here is the one stop shop for ppts, docs and other materials related to the course!
 
 The readings for each Unit will be on the ReadMe Page for each Unit's folder.   
 
