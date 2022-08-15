@@ -19,6 +19,4 @@ OB: -2.1 (up to Thm 2.1)
 
 
 ## Erata 
-### Homework Solution for unit 2
-
-"dbplot = False" was an option from a previous version of parzen.wge().  You can ignore / delete that option in the code. 
+None Known  
