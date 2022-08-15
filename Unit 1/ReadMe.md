@@ -3,14 +3,13 @@
 
 ## Woodward, Sadler, Robertson
 
-Chapter 3 pdf
+Chapter 3
 
 ## Optional Reading for Unit 1
 
-New Book
-Chapter 1 pdf
+Chapter 1
 
-Old Book
+Old Book: Woodward, Gray, Allen
 1.1-1.5
 
 
