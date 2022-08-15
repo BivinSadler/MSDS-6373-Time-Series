@@ -1,15 +1,18 @@
 
-**Required Reading for Unit 1**  
+# Unit 1 Stationarity
 
-## Woodward, Sadler, Robertson
+## Required Reading for Unit 1 
+
+### Woodward, Sadler, Robertson
 
 Chapter 3
 
 ## Optional Reading for Unit 1
 
+### Woodward, Sadler, Robertson  
 Chapter 1
 
-Old Book: Woodward, Gray, Allen
+### Old Book: Woodward, Gray, Allen  
 1.1-1.5
 
 
