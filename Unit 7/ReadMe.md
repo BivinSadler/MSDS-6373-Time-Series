@@ -1,4 +1,15 @@
-Required Reading for Unit 7
+
+# Required Reading From New Book # 
+
+ ## 6 ARMA Fitting and Forecasting
+ 
+ 6.2 Pages 245 - 261
+
+ 
+
+ 
+ 
+## Optional reading from Old Book: 
 
 Introduction: Page 229
 
