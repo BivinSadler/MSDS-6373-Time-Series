@@ -1,2 +1,2 @@
-# Project Info for Summer 2021. 
+# Project Info for Fall 2022 
  The Project description is posted in this folder!  
