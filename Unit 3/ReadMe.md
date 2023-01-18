@@ -1,4 +1,4 @@
-## Required Reading
+# Required Reading
 
 ### Woodward, Sadler and Robertson Book
 
