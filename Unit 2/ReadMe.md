@@ -17,6 +17,8 @@ OB: -2.1 (up to Thm 2.1)
 -3.1.2
 -3.2 (up to 3.2.3)
 
+## Homework  
+Chapter 4: Problems 1,2,3 and 4
 
 ## Erata 
 None Known  
