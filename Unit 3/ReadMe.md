@@ -13,7 +13,7 @@
 ## Homework  
 Problem 1 from Chapter 5
 
-**Optional Reading Reading for Unit 3**
+# **Optional Reading Reading for Unit 3**
 
 ### Woodward, Gray, Elliot
 
