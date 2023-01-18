@@ -2,7 +2,7 @@
 
 ### Woodward, Sadler and Robertson Book
 
-1.6 and 1.7!
+Chapter 4
 
 ## Homework  
 Chapter 4: Problems 1,2,3 and 4
