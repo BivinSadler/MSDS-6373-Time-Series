@@ -1,5 +1,3 @@
-# 2022 and Beyond Course
-
 ## Required Reading
 
 ### Woodward, Sadler and Robertson Book
@@ -13,12 +11,14 @@
 	5.2.2  ARMA(p,q) Models
 
 
+## Homework
+
+Chapter 5: Problems 5,6,7 and 8
 
 
 
 
-# PRE 2022 COURSE ... 2018 - 2021
-**Required Reading for Unit 5**
+## Optional Reading from Woodward, Gray and Allen
 
 Chapter 3:
 
@@ -27,8 +27,6 @@ Chapter 3:
 3.1.1 (all)
 
 3.1.2 (all)
-
-
 
 3.2.12 (all)
 
@@ -50,7 +48,4 @@ Example 3.21 (Including the "Using R")
 # Unit 5 Erata
 
 
-## HW  
-
-3.7d The positive real root for the MA(1) part of the model is associated with a dip in the spectral density at f = 0 (rather than f = .5)
 
