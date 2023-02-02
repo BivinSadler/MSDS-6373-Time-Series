@@ -5,7 +5,7 @@
 Chapter 3
 
 ## Homework
-Problems 1 - 10
+Chapter 3: Problems 1 - 10
 
 
 ## Optional Reading for Unit 1
