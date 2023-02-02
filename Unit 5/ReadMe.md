@@ -18,7 +18,7 @@ Chapter 5: Problems 5,6,7 and 8
 
 
 
-## Optional Reading from Woodward, Gray and Allen
+## Optional Reading from Woodward, Gray and Elliot
 
 Chapter 3:
 
