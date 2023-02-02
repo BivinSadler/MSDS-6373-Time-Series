@@ -1,6 +1,3 @@
-
-# 2022 and Beyond Course
-
 ## Required Reading
 
 ### Woodward, Sadler and Robertson Book
@@ -11,7 +8,9 @@
 
 
 
+## Homework
 
+Chapter 5: Problems 2,3 and 4
 
 
 
