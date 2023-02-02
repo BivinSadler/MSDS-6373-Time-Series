@@ -11,10 +11,10 @@
       * 7.2.2 Fitting Seasonal Models to Data  
 
 ## Homework
-Chapter 7: Problems 1 and 2  
-      
-
-**Optional Reading for Unit 6 From Woodward, Gray and Elliot 
+Chapter 7: Problems 1 and 2    
+        
+  
+## Optional Reading for Unit 6 From Woodward, Gray and Elliot 
 
 Chapter 5: 
 
