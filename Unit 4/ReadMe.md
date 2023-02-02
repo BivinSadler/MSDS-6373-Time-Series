@@ -12,13 +12,9 @@
 
 Chapter 5: Problems 2,3 and 4
 
-
-
-
-
-
-
-
+  
+  
+    
 
 ## Very Useful Supplemental Reading  
 ### This is the reading from the former text book (Woodward Gray Elliot)
