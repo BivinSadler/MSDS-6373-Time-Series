@@ -2,8 +2,10 @@
 
 ### Woodward, Sadler and Robertson Book
 
-1.6 and 1.7!
+Chapter 4
 
+## Homework  
+Chapter 4: Problems 1,2,3 and 4
 
 ## Optional Reading
 
@@ -16,7 +18,6 @@ OB: -2.1 (up to Thm 2.1)
 -3.1.1
 -3.1.2
 -3.2 (up to 3.2.3)
-
 
 ## Erata 
 None Known  

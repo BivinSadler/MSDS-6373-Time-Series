@@ -2,10 +2,11 @@
 # Unit 1 Stationarity
 
 ## Required Reading for Unit 1 
-
-### Woodward, Sadler, Robertson
-
 Chapter 3
+
+## Homework
+Chapter 3: Problems 1 - 10
+
 
 ## Optional Reading for Unit 1
 

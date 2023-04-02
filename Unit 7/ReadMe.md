@@ -1,15 +1,18 @@
+# Required Reading
 
-# Required Reading From New Book # 
+No required reading this week!
+Focus all energy on the asynch. :)  
 
- ## 6 ARMA Fitting and Forecasting
- 
- 6.2 Pages 245 - 261
+## Homework
+Focus on the FLS and getting ready for the midterm.  
+There are midterm practice problems and exams in the Unit 8 Folder.  
+        
+
+
 
  
-
  
- 
-## Optional reading from Old Book: 
+## Optional reading from Woodward, Gray and Elliot: 
 
 Introduction: Page 229
 
