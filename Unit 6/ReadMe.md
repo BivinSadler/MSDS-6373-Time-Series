@@ -1,5 +1,5 @@
 
-# Required Reading
+# Required Reading From New Book # 
 
  ## 7 ARIMA, Seasonal, and ARCH/GARCH Models
 * 7.1 ARIMA(p,d,q) Models  
@@ -9,12 +9,11 @@
 * 7.2 Seasonal Models  
       * 7.2.1 Properties of Seasonal Models  
       * 7.2.2 Fitting Seasonal Models to Data  
+      
 
-## Homework
-Chapter 7: Problems 1 and 2    
-        
-  
-## Optional Reading for Unit 6 From Woodward, Gray and Elliot 
+      
+
+**Optional Reading for Unit 6 From Old Book**  
 
 Chapter 5: 
 

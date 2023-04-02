@@ -1,4 +1,4 @@
-# Required Reading
+## Required Reading
 
 ### Woodward, Sadler and Robertson Book
 
@@ -10,10 +10,9 @@
 
 5.1.1 The AR(1) Model
 
-## Homework  
-Chapter 5: Problem 1
 
-# **Optional Reading Reading for Unit 3**
+
+**Optional Reading Reading for Unit 3**
 
 ### Woodward, Gray, Elliot
 
