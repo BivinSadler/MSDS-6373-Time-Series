@@ -2,13 +2,15 @@
 
 ## Required Reading:  
 
-8.3  
-8.3.1  
-8.3.2  
-8.3.3  
-8.3.4  
-8.3.5 (8.3.5.1, 8.3.5.1, 8.3.5.3 ... Examples!)  
+7.1.2  
+7.1.3  
+7.2.2  
+7.2.3  
 
+## Homework:  
+
+Chapter 7  
+Problem 5,6 and 9
 
 ## Erata:
 10.8.2	The answer needs to reference a "Type II" error rather than a "Type 1" error.  
