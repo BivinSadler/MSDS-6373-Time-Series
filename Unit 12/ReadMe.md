@@ -1,3 +1,10 @@
 
-## Chapter 12 Reading
-Chapter 10 page 418 to 449
+## Reading  
+
+Suggested: Chapter 10
+
+## Homework  
+
+Chapter 10  
+Problems: 1,2 and 5
+
