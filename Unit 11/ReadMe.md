@@ -1,6 +1,14 @@
 # Model Building!!!
 
-## Suggested Reading
+## Reading  
+
+Chapter 9  
+
+## Homework  
+
+Chapter 9  
+
+Problems 1 and 2
 
 ## Erata
 
