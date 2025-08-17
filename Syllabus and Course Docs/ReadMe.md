@@ -1,1 +1,1 @@
-# Syllbaus and Course Docs!
+# Syllabus and Course Docs!
