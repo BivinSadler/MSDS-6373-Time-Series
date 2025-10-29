@@ -18,8 +18,13 @@ The next two sections are fairly mathematical.  It is not necessary to fully gra
 8.2  
 8.2.1  
 
+## Howework:  
+Chapter 6:
+Problems
+1,2,11,12
 
 ## Errata
 
 9.5.4 The matching definitions are off for the YW and the ML estimates.  They should be switched.  The ML method is the iterative method.    
 9.9.4 n is missing thus the AIC calculation cannot be made.  Simply use the answer provided.   
+
